@@ -1,4 +1,13 @@
+@@font-face {
+  font-family: 'chunkfive';
+  src: url('Chunkfive.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 p
 {
   color: red;
+  font-size: 1.5em;
+  font-family: chunkfive, Impact;
 }
