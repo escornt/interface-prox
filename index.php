@@ -6,5 +6,6 @@
   </head>
   <body>
       <h1>Phase de test | Portail de login</h1>
+      <p>Cette phrase devrais etre rouge</p>
   </body>
 </html>
