@@ -4,7 +4,7 @@ echo "pls";
 if(isset($_POST['sub'])){
   $username = $_POST['username']; $password = $_POST['password'];
   if($username === 'admin' && $password === 'password'){
-    $_SESSION['login'] = true; header('LOCATION:wherever.php'); die();
+    echo "GG WP"; die();
   }
   if($username !== 'admin')$userError = 'Invalid Username';
   if($password !== 'password')$passError = 'Invalid Password';
