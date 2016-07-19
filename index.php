@@ -10,8 +10,10 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div class="container m1">
-      <h1 class="m1">Interface de création de conteneurs Proxmox</h1>
+    <div class="row">
+        <div class="col-xs-4 col-md-offset-4">
+          <h1 class="m1"><b>Interface de création de conteneurs Proxmox</b></h1>
+        </div>
     </div>
   <div class="row">
 
