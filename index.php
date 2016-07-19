@@ -13,7 +13,7 @@
   <body>
     <div class="row">
         <div class="col-xs-4 col-md-offset-4">
-          <h1 class="m1 customfont blu">Interface Proxmox</h1>
+          <div class="m1 customfont blu fs2">Interface Proxmox</div>
         </div>
     </div>
   <div class="row">
@@ -22,19 +22,19 @@
 
         <form class="form-vertical" role="form">
           <div class="form-group has-feedback">
-            <label for="usr"><div class="customfont blu">Nom d'utilisateur :</div></label>
+            <label for="usr"><div class="customfont blu fs1">Nom d'utilisateur :</div></label>
             <input type="usr" class="form-control" id="usr">
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <label for="pwd"><div class="customfont blu">Mot de passe :</div></label>
+            <label for="pwd"><div class="customfont blu fs1">Mot de passe :</div></label>
             <input type="password" class="form-control" id="pwd">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="checkbox">
-            <label><input type="checkbox"><div class="customfont blu"> Remember me</div></label>
+            <label><input type="checkbox"><div class="customfont blu fs1"> Remember me</div></label>
           </div>
-	         <button type="submit" class="btn btn-info customfont">Submit</button>
+	         <button type="submit" class="btn btn-info customfont fss1">Submit</button>
          </form>
      </div>
    </div>
