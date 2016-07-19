@@ -22,10 +22,12 @@
           <div class="form-group">
             <label for="usr">Nom d'utilisateur :</label>
             <input type="usr" class="form-control" id="usr">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="form-group">
             <label for="pwd">Mot de passe :</label>
             <input type="password" class="form-control" id="pwd">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="checkbox">
             <label><input type="checkbox"> Remember me</label>
