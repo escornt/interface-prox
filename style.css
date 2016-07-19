@@ -14,3 +14,7 @@ body {
 input {
   max-width: "100%"
 }
+
+/* MARGIN */
+.m1 {margin:  1rem;}
+.m2 {margin:  2rem;}
