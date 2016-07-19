@@ -24,5 +24,8 @@ input {
 }
 .customfont {
   font-family: 'Changa', sans-serif;
-  color: #9BC5D4;
+}
+
+.blu {
+  color: #5AC8ED;
 }
