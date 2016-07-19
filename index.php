@@ -10,7 +10,6 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div class="img"></div>
     <div class="container">
       <h1>Interface de création de conteneurs Proxmox</h1>
     </div>
