@@ -15,6 +15,7 @@
     </div>
 &nbsp;
   <div class="row">
+    <div class="col-xs-3">
     <div class="col-xs-6">
 
         <form class="form-vertical" role="form">
@@ -34,6 +35,7 @@
 	         <button type="submit" class="btn btn-info">Submit</button>
          </form>
      </div>
+     <div class="col-xs-3">
    </div>
  </body>
 </html>
