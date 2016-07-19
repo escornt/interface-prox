@@ -11,9 +11,8 @@
   </head>
   <body>
     <div class="container">
-      <h1>Interface de création de conteneurs Proxmox</h1>
+      <h1 class="m1">Interface de création de conteneurs Proxmox</h1>
     </div>
-&nbsp;
   <div class="row">
 
     <div class="col-xs-4 col-md-offset-4">
