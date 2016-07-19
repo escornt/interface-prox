@@ -22,4 +22,7 @@ input {
 @font-face {
   font-family: 'Changa', sans-serif;
 }
-.customfont {font-family: 'Changa', sans-serif;}
+.customfont {
+  font-family: 'Changa', sans-serif;
+  color: #9BC5D4;
+}
