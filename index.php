@@ -15,16 +15,16 @@
     </div>
 &nbsp;
   <div class="row">
-    <div class="col-xs-3">
+    <div class="col-md-3">
     <div class="col-xs-6">
 
         <form class="form-vertical" role="form">
-          <div class="form-group">
+          <div class="form-group has-feedback">
             <label for="usr">Nom d'utilisateur :</label>
             <input type="usr" class="form-control" id="usr">
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
-          <div class="form-group">
+          <div class="form-group has-feedback">
             <label for="pwd">Mot de passe :</label>
             <input type="password" class="form-control" id="pwd">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
@@ -35,7 +35,7 @@
 	         <button type="submit" class="btn btn-info">Submit</button>
          </form>
      </div>
-     <div class="col-xs-3">
+     <div class="col-md-3">
    </div>
  </body>
 </html>
