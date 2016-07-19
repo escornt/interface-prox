@@ -10,14 +10,22 @@
   </head>
   <body>
     <div class="container">
-      <h1>Phase de test <small>Portail de login</small></h1>
+      <h1>Interface de création de conteneurs Proxmox<small> Phase de test</small></h1>
     </div>
-    <div class="container-fluid">
-      <p><abbr title="test">petit bout de texte</abbr><blockquote>Ceci est mis en avant par blockquote <footer>Thomas</footer></blockquote></p>
-      <p class="pre-scrollable"><pre>Coucou</pre></p>
-      <table class="table">
-	
-      </table>
+    <div class="container">
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <label class="sr-only" for="email">Nom d'utilisateur :</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="pwd">Mot de passe :</label>
+          <input type="password" class="form-control" id="pwd">
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+      </form>
     </div>
   </body>
 </html>
