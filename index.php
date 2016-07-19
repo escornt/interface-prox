@@ -13,7 +13,7 @@
   <body>
     <div class="row">
         <div class="col-xs-4 col-md-offset-4">
-          <h1 class="m1 customfont"><b>Interface Proxmox</b></h1>
+          <h1 class="m1 customfont">Interface Proxmox</h1>
         </div>
     </div>
   <div class="row">
