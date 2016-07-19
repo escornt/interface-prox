@@ -18,3 +18,8 @@ input {
 /* MARGIN */
 .m1 {margin-bottom: 5rem;}
 .m2 {margin: 2rem;}
+
+@font-face {
+  font-family: 'Changa', sans-serif;
+}
+.customfont {font-family: 'Changa', sans-serif;}
