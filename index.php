@@ -16,7 +16,7 @@
     </div>
 &nbsp;
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-6 center block">
       <div class="container">
         <form class="form-vertical" role="form">
           <div class="form-group">
