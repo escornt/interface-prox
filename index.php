@@ -34,7 +34,7 @@
           <div class="checkbox">
             <label><input type="checkbox"><div class="customfont"> Remember me</div></label>
           </div>
-	         <button type="submit" class="btn btn-info">Submit</button>
+	         <button type="submit" class="btn btn-info customfont">Submit</button>
          </form>
      </div>
    </div>
