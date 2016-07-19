@@ -1,5 +1,9 @@
+h1, p, label {
+    color: white;
+}
+
 body {
-    background-image: url("/montain.jpg");
+    background-image: url("/background.jpg");
     background-repeat: no-repeat;
     background-position: absolute;
     background-size: cover;

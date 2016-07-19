@@ -5,14 +5,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>Interface proxmox</title>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-      <link rel="stylesheet" href="test-style.css" />
+      <link rel="stylesheet" href="style.css" />
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="img">i</div>
     <div class="container">
-      <h1>Interface de création de conteneurs Proxmox<small> Phase de test</small></h1>
+      <h1>Interface de création de conteneurs Proxmox</h1>
     </div>
 &nbsp;
     <div class="container">
@@ -26,7 +26,7 @@
           <input type="password" class="form-control" id="pwd">
         </div>
         <div class="checkbox">
-          <label><input type="checkbox"> Remember me</label>
+          <label><input type="checkbox"><b> Remember me</b></label>
         </div>
 	<button type="submit" class="btn btn-info">Submit</button>
       </form>
