@@ -15,21 +15,24 @@
       <h1>Interface de création de conteneurs Proxmox<small> Phase de test</small></h1>
     </div>
 &nbsp;
-    <div class="container">
-      <form class="form-vertical" role="form">
-        <div class="form-group">
-          <label for="usr">Nom d'utilisateur :</label>
-          <input type="usr" class="form-control" id="usr">
-        </div>
-        <div class="form-group">
-          <label for="pwd">Mot de passe :</label>
-          <input type="password" class="form-control" id="pwd">
-        </div>
-        <div class="checkbox">
-          <label><input type="checkbox"> Remember me</label>
-        </div>
-	<button type="submit" class="btn btn-info">Submit</button>
-      </form>
-    </div>
-  </body>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="container">
+        <form class="form-vertical" role="form">
+          <div class="form-group">
+            <label for="usr">Nom d'utilisateur :</label>
+            <input type="usr" class="form-control" id="usr">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Mot de passe :</label>
+            <input type="password" class="form-control" id="pwd">
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+          </div>
+	         <button type="submit" class="btn btn-info">Submit</button>
+         </form>
+       </div>
+     </div>
+   </div>
 </html>
