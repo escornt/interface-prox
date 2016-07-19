@@ -16,7 +16,7 @@
 &nbsp;
   <div class="row">
     <div class="col-xs-6">
-      <div class="container">
+
         <form class="form-vertical" role="form">
           <div class="form-group">
             <label for="usr">Nom d'utilisateur :</label>
@@ -33,7 +33,6 @@
           </div>
 	         <button type="submit" class="btn btn-info">Submit</button>
          </form>
-       </div>
      </div>
    </div>
  </body>
