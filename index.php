@@ -27,12 +27,12 @@
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <label for="pwd">Mot de passe :</label>
+            <label for="pwd customfont">Mot de passe :</label>
             <input type="password" class="form-control" id="pwd">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="checkbox">
-            <label><input type="checkbox"> Remember me</label>
+            <label><input type="checkbox customfont"> Remember me</label>
           </div>
 	         <button type="submit" class="btn btn-info">Submit</button>
          </form>
