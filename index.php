@@ -15,8 +15,8 @@
     </div>
 &nbsp;
   <div class="row">
-    <div class="col-md-4">""</div>
-    <div class="col-xs-4">
+
+    <div class="col-xs-4 col-offset-md-4">
 
         <form class="form-vertical" role="form">
           <div class="form-group has-feedback">
@@ -35,7 +35,6 @@
 	         <button type="submit" class="btn btn-info">Submit</button>
          </form>
      </div>
-     <div class="col-md-4">""</div>
    </div>
  </body>
 </html>
