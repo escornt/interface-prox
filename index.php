@@ -20,7 +20,7 @@
 
     <div class="col-xs-4 col-md-offset-4">
       <div class="login-box-body">
-        <form class="form-vertical" role="form">
+        <form class="form-vertical" role="form" action="sub_handler.php">
           <div class="form-group has-feedback">
             <input type="usr" class="form-control" id="usr" placeholder="User">
             <span class="glyphicon glyphicon-user form-control-feedback blu"></span>
@@ -32,7 +32,7 @@
           <div class="checkbox">
             <label><input type="checkbox"><div class="customfont blu"> Remember me</div></label>
           </div>
-	         <input type="submit" class="btn btn-info customfont fss1" action="sub_handler.php">Submit</button>
+	         <button type="submit" class="btn btn-info customfont fss1">Submit</button>
          </form>
        </div>
      </div>
