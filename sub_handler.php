@@ -1,3 +1,3 @@
 <?php
-print("OK\n");
+  header('google.fr');
 ?>
