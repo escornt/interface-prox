@@ -32,7 +32,7 @@
           <div class="checkbox">
             <label><input type="checkbox"><div class="customfont blu"> Remember me</div></label>
           </div>
-	         <button type="submit" class="btn btn-info customfont fss1">Submit</button>
+	         <input type="submit" class="btn btn-info customfont fss1" action="sub_handler.php">Submit</button>
          </form>
        </div>
      </div>
