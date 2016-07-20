@@ -16,7 +16,7 @@ input {
 }
 
 /* MARGIN */
-.m1 {margin-bottom: 5rem;}
+.m1 {margin-bottom: 5rem; margin-top: 5rem}
 .m2 {margin: 2rem;}
 
 @font-face {
@@ -26,13 +26,6 @@ input {
   font-family: 'Changa', sans-serif;
 }
 
-.fs1 {
-  font-size: 21px;
-}
-
-.fs2 {
-  font-size: 36px;
-}
-.blu {
-  color: #5AB5ED;
-}
+.fs1 {font-size: 21px;}
+.fs2 {font-size: 36px;}
+.blu {color: #5AB5ED;}
