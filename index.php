@@ -22,11 +22,11 @@
       <div class="login-box-body">
         <form class="form-vertical" role="form" method="GET" action="sub_handler.php">
           <div class="form-group has-feedback">
-            <input type="usr" class="form-control" id="usr" placeholder="User">
+            <input type="usr" name="user" class="form-control" id="usr" placeholder="User">
             <span class="glyphicon glyphicon-user form-control-feedback blu"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" class="form-control" id="pwd" placeholder="Password">
+            <input type="password" nqme="pswd" class="form-control" id="pwd" placeholder="Password">
             <span class="glyphicon glyphicon-lock form-control-feedback blu"></span>
           </div>
           <div class="checkbox">
