@@ -1,11 +1,13 @@
 <?php
-if (strcmp($_POST["user"], "OK") == 0  && strcmp($_POST["pswd"], "OK") == 0)
+session_start();
+
+/*Start connection LDAP*/
+/*Do Authentication*/
+/*Test Result*/
+if (strcmp($_POST["user"], "OK") != 0  || strcmp($_POST["pswd"], "OK") != 0)
 {
-print("Coucou");
+  $_SESSION['logstate'] = 1;
+  include_once('view/login.php');
 }
-else {
-  print("Pas coucou");
-}
-  die;
-  header('Location: http://google.fr');
+include_once('view/login');
 ?>
