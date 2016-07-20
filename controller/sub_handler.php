@@ -1,5 +1,5 @@
 <?php
-if ($_POST["user"] == "OK" && $_POST["pswd"] == "OK")
+if (strcmp($_POST["user"], "OK") == 0  && strcmp($_POST["pswd"], "OK") == 0)
 {
 print("Coucou");
 }
