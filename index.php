@@ -19,7 +19,7 @@
   <div class="row">
 
     <div class="col-xs-4 col-md-offset-4">
-
+      <div class="login-box-body">
         <form class="form-vertical" role="form">
           <div class="form-group has-feedback">
             <label for="usr"><div class="customfont blu fs1">Nom d'utilisateur :</div></label>
@@ -36,6 +36,7 @@
           </div>
 	         <button type="submit" class="btn btn-info customfont fss1">Submit</button>
          </form>
+       </div>
      </div>
    </div>
  </body>
