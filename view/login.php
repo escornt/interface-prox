@@ -35,12 +35,11 @@ session_start();
             <label><input type="checkbox"><div class="customfont blu"> Remember me</div></label>
           </div>
 	        <button type="submit" class="btn btn-info customfont">Submit</button>
-          <?php
-          if (true){ ?>
-            aaa
-          <?php } else{?>
+          <?php if (true): ?>
+               aaa
+          <?php else:?>
               bbb
-          <?php}?>
+          <?php endif;?>
         </form>
       </div><!-- login-box-body -->
     </div><!-- /.col-xs-4 col-md-offset-4  -->
