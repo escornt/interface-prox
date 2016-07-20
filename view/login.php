@@ -35,9 +35,9 @@ session_start();
             <label><input type="checkbox"><div class="customfont blu"> Remember me</div></label>
           </div>
 	        <button type="submit" class="btn btn-info customfont">Submit</button>
-          <?php if (true): ?>
+          <?php if ($_SESSION['logstate'] == 1): ?>
             <div class="alert alert-danger"><a href="#" class="close" aria-label="close">&times;</a>>Echec de l'authentification</div>
-          <?php endif; ?>  
+          <?php endif; ?>
         </form>
       </div><!-- login-box-body -->
     </div><!-- /.col-xs-4 col-md-offset-4  -->
