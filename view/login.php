@@ -37,6 +37,7 @@ session_start();
 	        <button type="submit" class="btn btn-info customfont">Submit</button>
           <?php if (true): ?>
             <div class="alert alert-danger"><a href="#" class="close" aria-label="close">&times;</a>>Echec de l'authentification</div>
+          <?php endif; ?>  
         </form>
       </div><!-- login-box-body -->
     </div><!-- /.col-xs-4 col-md-offset-4  -->
