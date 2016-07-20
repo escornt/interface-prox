@@ -26,7 +26,7 @@
             <span class="glyphicon glyphicon-user form-control-feedback blu"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" nqme="pswd" class="form-control" id="pwd" placeholder="Password">
+            <input type="password" name="pswd" class="form-control" id="pwd" placeholder="Password">
             <span class="glyphicon glyphicon-lock form-control-feedback blu"></span>
           </div>
           <div class="checkbox">
