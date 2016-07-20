@@ -22,12 +22,12 @@
       <div class="login-box-body">
         <form class="form-vertical" role="form">
           <div class="form-group has-feedback">
-            <input type="usr" class="form-control" id="usr" placeholder="prénom.nom">
-            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            <input type="usr" class="form-control" id="usr" placeholder="User">
+            <span class="glyphicon glyphicon-user form-control-feedback blu"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" class="form-control" id="pwd" placeholder="password">
-            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            <input type="password" class="form-control" id="pwd" placeholder="Password">
+            <span class="glyphicon glyphicon-lock form-control-feedback blu"></span>
           </div>
           <div class="checkbox">
             <label><input type="checkbox"><div class="customfont blu"> Remember me</div></label>
