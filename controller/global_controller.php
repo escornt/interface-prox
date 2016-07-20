@@ -1,1 +1,1 @@
-<?php header(Location:'view/login.php'); ?>
+<?php include("view/login.php"); ?>
