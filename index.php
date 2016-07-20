@@ -24,12 +24,12 @@
           <div class="form-group has-feedback">
             <label for="usr"><div class="customfont blu fs1">Nom d'utilisateur :</div></label>
             <input type="usr" class="form-control" id="usr">
-            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            <span class="glyphicon glyphicon-user form-control-feedback fs1"></span>
           </div>
           <div class="form-group has-feedback">
             <label for="pwd"><div class="customfont blu fs1">Mot de passe :</div></label>
             <input type="password" class="form-control" id="pwd">
-            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            <span class="glyphicon glyphicon-lock form-control-feedback fs1"></span>
           </div>
           <div class="checkbox">
             <label><input type="checkbox"><div class="customfont blu fs1"> Remember me</div></label>
