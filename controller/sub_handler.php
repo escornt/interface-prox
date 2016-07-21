@@ -13,5 +13,7 @@ else {
 }
 $file = $_SERVER['DOCUMENT_ROOT']."/view/login.html";
 $doc = new DOMDocument();
-$doc->loadHTMLFile($file);
+if ($doc->loadHTMLFile($file) == false){
+echo "test";
+}
 ?>
