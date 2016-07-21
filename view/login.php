@@ -38,6 +38,9 @@ session_start();
           <?php if ($_SESSION['logstate'] == 1): ?>
             <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Echec de l'authentification</div>
           <?php endif; ?>
+          <?php if ($_SESSION['reach_serv'] == 1): ?>
+            <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Le serveur d'authentification est innaccessible</div>
+          <?php endif; ?>
         </form>
       </div><!-- login-box-body -->
     </div><!-- /.col-xs-4 col-md-offset-4  -->
