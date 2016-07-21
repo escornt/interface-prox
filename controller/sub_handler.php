@@ -14,10 +14,11 @@ else {
 $ds=ldap_connect("10.100.1.18:389");
 $r=ldap_bind($ds, $_POST['user'] ."@1001PNEUS.LOCAL", $_POST['pswd']);
 if ($r == false){
-  $_SESSION['substate'] = 1;
+  $_SESSION['logstate'] = 1;
   header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
 }
 else {
+  $_SESSION['logstate'] = 1;
   echo 'coucou';
 }
 ?>
