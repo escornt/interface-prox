@@ -20,7 +20,7 @@ if ($r == false || empty($_POST['user']) || empty($_POST['pswd'])){
 else {
   $_SESSION['logstate'] = 0;
 
-  var_dump(LoadInfosFromDomaine($ds);
+  var_dump(LoadInfosFromDomaine($ds));
 }
 
 function LoadInfosFromDomaine($ds) {
