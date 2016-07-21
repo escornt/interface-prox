@@ -26,6 +26,16 @@ else {
   }
 }
 
+function testDroits($droits) {
+  $test = false;
+  foreach ($droits as $d) {
+    if (strcmp($d, '*admin-it*') == 0) {
+      $test = true;
+    }
+  }
+  return ($test);
+}
+
 function InitializeDroitsFromDom($ds) {
   $droits = array();
   $dn = "DC=1001pneus,DC=local";
