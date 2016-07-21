@@ -32,6 +32,7 @@
             <label><input type="checkbox"><div class="customfont blu"> Remember me</div></label>
           </div>
 	        <button type="submit" class="btn btn-info customfont">Submit</button>
+          <?php echo $_SESSION['substate'] ?>
           <?php if ($_SESSION['substate'] == 1): ?>
             <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Echec de l'authentification</div>
           <?php endif; ?>
