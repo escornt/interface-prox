@@ -36,7 +36,7 @@ session_start();
           </div>
 	        <button type="submit" class="btn btn-info customfont">Submit</button>
           <?php if ($_SESSION['logstate'] == 1): ?>
-            <div class="alert alert-danger m1"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Echec de l'authentification</div>
+            <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Echec de l'authentification</div>
           <?php endif; ?>
         </form>
       </div><!-- login-box-body -->
