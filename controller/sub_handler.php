@@ -19,7 +19,7 @@ else {
   if (empty($ds)) {
     echo 'oops';
   }
-  print_r $droits;
+  print_r ($droits);
 }
 
 function InitializeDroitsFromDom($ds) {
