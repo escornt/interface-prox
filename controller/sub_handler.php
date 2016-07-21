@@ -22,7 +22,7 @@ if ($r == false || empty($_POST['user']) || empty($_POST['pswd'])){
 else {
   $_SESSION['logstate'] = 0;
 
-  print_r(LoadInfosFromDomaine($ds));
+  print_r(InitializeDroitsFromDom($ds));
 }
 
 function LoadInfosFromDomaine($ds) {
