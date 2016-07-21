@@ -15,7 +15,7 @@ if ($r == false || empty($_POST['user']) || empty($_POST['pswd'])){
 else {
   $_SESSION['substate'] = 0;
 
-  var_dump(LoadInfosFromDomaine($ds));
+  var_dump(InitializeDroitsFromDom($ds));
 }
 
 function LoadInfosFromDomaine($ds) {
