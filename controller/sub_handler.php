@@ -11,7 +11,7 @@ session_start();
 else {
   $_SESSION['logstate'] = 0;
 }*/
-$ds=ldap_connect("10.100.1.18:389");
+$ds=ldap_connect("10.100.1lol.18:389");
 $r=ldap_bind($ds);
 if ($r == false){
   $_SESSION['reach_serv'] = 1;
