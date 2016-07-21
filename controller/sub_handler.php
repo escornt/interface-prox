@@ -16,10 +16,14 @@ else {
   $_SESSION['substate'] = 0;
 
   $droits = InitializeDroitsFromDom($ds);
-  if (empty($ds)) {
-    echo 'oops';
+  if (testDroits($droits)) {
+      $_SESSION['droits'] = 0;
+    echo "OK";
   }
-  print_r ($droits);
+  else {
+    $_SESSION['droits'] = 1;
+    header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
+  }
 }
 
 function InitializeDroitsFromDom($ds) {
