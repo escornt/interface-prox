@@ -37,7 +37,7 @@ function InitializeDroitsFromDom($ds) {
   $droits = array();
   $dn = "DC=1001pneus,DC=local";
   $filter = "(&(&(&(objectClass=group))))";
-  $search = @ldap_search($ds, $dn, $filter) or die("ldap search failed");
+  $search = ldap_search($ds, $dn, $filter) or die("ldap search failed");
   $entries = ldap_get_entries($ds, $search);
   foreach ($entries as $e) {
     if (preg_match("/intranet_(.*)/", $e[cn][0], $m)) {
