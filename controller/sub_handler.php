@@ -16,7 +16,7 @@ else {
   $_SESSION['substate'] = 0;
 
   $droits = InitializeDroitsFromDom($ds);
-  if (empty(&ds)) {
+  if (empty($ds)) {
     echo 'oops';
   }
   print_r $droits;
