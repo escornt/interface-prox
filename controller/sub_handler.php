@@ -11,5 +11,7 @@ if (strcmp($_POST["user"], "OK") != 0  || strcmp($_POST["pswd"], "OK") != 0)
 else {
   $_SESSION['logstate'] = 0;
 }
-DOMDocument::loadHTMLFiler ($_SERVER['DOCUMENT_ROOT']."/view/login.php", 0);
+$file = $_SERVER['DOCUMENT_ROOT']."/view/login.php";
+$doc = new DOMDocument();
+$doc->loadHTMLFile($file);
 ?>
