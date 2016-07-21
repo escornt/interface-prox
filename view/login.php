@@ -45,3 +45,4 @@ session_start();
   </div><!-- /.row -->
  </body>
 </html>
+<?php ?>
