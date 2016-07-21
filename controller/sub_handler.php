@@ -15,12 +15,12 @@ if ($r == false || empty($_POST['user']) || empty($_POST['pswd'])){
 else {
   $_SESSION['substate'] = 0;
 
-  var_dump(InitializeDroitsFromDom($ds));
+  var_dump(LoadInfosFromDomaine($ds));
 }
 
 function LoadInfosFromDomaine($ds) {
   $dn = "DC=1001pneus,DC=local";
-  $filter = "(&(&(&(objectCategory=person)(objectClass=user))))";
+  $filter = "(&(&(&(objectCategory=droits)(objectClass=user))))";
   $search = ldap_search($ds, $dn, $filter) or die("ldap search failed");
   $entries = ldap_get_entries($ds, $search);
 return ($entries);
