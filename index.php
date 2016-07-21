@@ -1,3 +1,3 @@
 <?php
 
-include_once('view/login.php');
+include_once('view/login.html');
