@@ -8,5 +8,8 @@ if (strcmp($_POST["user"], "OK") != 0  || strcmp($_POST["pswd"], "OK") != 0)
 {
   $_SESSION['logstate'] = 1;
 }
-include('view/login.php');
+else {
+  $_SESSION['logstate'] = 0;
+}
+include_once('view/login.php');
 ?>
