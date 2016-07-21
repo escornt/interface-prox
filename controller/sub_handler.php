@@ -20,7 +20,20 @@ if ($r == false || empty($_POST['user']) || empty($_POST['pswd'])){
 else {
   $_SESSION['logstate'] = 0;
 
-  print_r(InitializeDroitsFromDom($ds));
+  var_dump(LoadInfosFromDomaine($ds));
+}
+
+function LoadInfosFromDomaine($ds, $login) {
+  $dn = "DC=1001pneus,DC=local";
+  $filter = "(&(&(&(objectCategory=person)(objectClass=user))))";
+  $search = @ldap_search($ds, $dn, $filter) or die("ldap search failed");
+  $entries = ldap_get_entries($ds, $search);
+
+  foreach ($entries as $user) {
+    if ($user[samaccountname][0] == $login) {
+      return($user);
+    }
+  }
 }
 
 function InitializeDroitsFromDom($ds) {
