@@ -19,11 +19,11 @@ if ($r == false || empty($_POST['user']) || empty($_POST['pswd'])){
 }
 else {
   $_SESSION['logstate'] = 0;
-  echo "coucou";
-  /*print_r(InitializeDroitsFromDom($ds));*/
+
+  print_r(InitializeDroitsFromDom($ds));
 }
 
-/*function InitializeDroitsFromDom($ds) {
+function InitializeDroitsFromDom($ds) {
   $droits = array();
   $dn = "DC=1001pneus,DC=local";
   $filter = "(&(&(&(objectClass=group))))";
@@ -35,6 +35,6 @@ else {
     }
   }
   return($droits);
-}*/
+}
 
 ?>
