@@ -11,5 +11,5 @@ if (strcmp($_POST["user"], "OK") != 0  || strcmp($_POST["pswd"], "OK") != 0)
 else {
   $_SESSION['logstate'] = 0;
 }
-include_once(dirname(__FILE__) . '../view/login.php');
+include_once('../view/login.php');
 ?>
