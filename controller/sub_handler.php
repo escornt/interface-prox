@@ -20,7 +20,7 @@ if ($r == false || empty($_POST['user']) || empty($_POST['pswd'])){
   header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
 }
 else {
-  $_SESSION['logstate'] = 0;
+  $_SESSION['substate'] = 0;
 
   print_r(InitializeDroitsFromDom($ds));
 }
