@@ -11,9 +11,9 @@ session_start();
 else {
   $_SESSION['logstate'] = 0;
 }*/
-$ds=ldap_connect("10.10lol0.2345.18:389");
-echo $ds;
-if ($ds == false){
+$ds=ldap_connect("10.100.1.18:389");
+$r=ldap_bind($ds);
+if ($r == false){
   $_SESSION['reach_serv'] = 1;
   header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
 }
