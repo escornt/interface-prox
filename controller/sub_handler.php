@@ -12,6 +12,8 @@ else {
   $_SESSION['logstate'] = 0;
 }*/
 $ds=ldap_connect("10.100.1.18:389");
+ldap_set_option($ds, LDAP_OPT_REFERRALS, 0);
+ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3);
 $r=ldap_bind($ds, $_POST['user'] ."@1001PNEUS.LOCAL", $_POST['pswd']);
 if ($r == false || empty($_POST['user']) || empty($_POST['pswd'])){
   $_SESSION['substate'] = 1;
