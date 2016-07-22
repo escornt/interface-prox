@@ -8,6 +8,7 @@ $InfosDroits = array();
 $result = Connect($_POST["user"], $_POST["pswd"], $Infos, $InfosDroits, $server);
 if ($result == false) {
   $_SESSION['substate'] = 1;
+  $_SESSION['droits'] = 0;
   header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
 } else {
 $_SESSION['substate'] = 0; }
