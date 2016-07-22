@@ -13,6 +13,7 @@ else {
   $_SESSION['substate'] = 0;
   SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
   var_dump($InfoDroits);
+  var_dump($Infos);
 }
 
 
