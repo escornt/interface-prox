@@ -12,7 +12,12 @@ if ($result == false || empty($_POST['user']) || empty($_POST['pswd'])){
 else {
   $_SESSION['substate'] = 0;
   SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
-  var_dump($InfoDroits);
+  foreach ($InfoDroits as $key => $a)
+  {
+    if ($a == 1) {
+      echo $key;
+    }
+  }
 }
 
 
@@ -40,7 +45,6 @@ function ConnectToDomain($_Login, $Pass, &$Infos, &$InfosDroits, $server) {
     $Infos = LoadInfosFromDomaine($ds, $Login);
     $Infos[TypeConnexion] = "Domaine";
     $InfoDroits = InitializeDroitsFromDom($ds);
-    var_dump($InfoDroits);
     return true;
   }
   return false;
