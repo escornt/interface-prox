@@ -30,7 +30,7 @@ function testDroits($droits) {
   $test = false;
   var_dump($droits);
   foreach ($droits as $key => $d) {
-    echo $d;
+    echo $key;
     if (strcmp($key, '*admin-it*') == 0) {
       $test = true;
     }
