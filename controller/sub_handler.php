@@ -18,16 +18,9 @@ die();
 function Connect($Login, $Pass, &$Infos, &$InfosDroits, $server) {
 
   if (!ConnectToDomain($Login, $Pass, $Infos, $InfosDroits, $server)) {
-    // print "Connexion au domaine impossible, tentative locale\n\n";
-    //if (!ConnectLocaly($Login, $Pass, &$Infos, &$InfosDroits)) {
-    //  return false;
-    //}
-    // print "Tentative locale OK\n";
+
     return false;
   }
-  $loginInfo=explode('@',$Login);
-  $L = trim($loginInfo[0]);
-  SaveInfosLocaly($L, $Pass, $Infos, $InfosDroits);
   return true;
 }
 
@@ -62,36 +55,6 @@ function ConnectLocaly($Login, $Pass,&$Infos, &$InfosDroits) {
   $InfosDroits = unserialize(base64_decode($r[InfosDroits]));
   $Infos[TypeConnexion] = "Locale";
   return true;
-}
-
-function SaveInfosLocaly($Login, $Pass, &$Infos, &$InfosDroits) {
-  $q = "SELECT * FROM Configuration_AdminUsers WHERE Username='$Login' AND Password='" . md5($Pass) . "'";
-  $res = query($q);
-  if (!mysql_num_rows($res[res])) {
-    $q2 = "SELECT * FROM Configuration_AdminUsers WHERE Username='$Login'";
-    $res2 = query($q2);
-    if (!mysql_num_rows($res2[res])) {
-      $q = "INSERT INTO  `Configuration_AdminUsers` (
-				`Id` ,`UserName` ,`Password` ,`InfosDom`,`InfosDroits`,`NomVisible`, `SipUser`, `SipNumber`
-			) VALUES (
-				NULL ,  '$Login',  '" . md5($Pass) . "', '" . base64_encode(serialize($Infos)) . "','" . base64_encode(serialize($InfosDroits)) . "','" . $Infos[cn][0] . "','" . $Infos['pager'][0] . "','" . $Infos[ipphone][0] . "');";
-      $res = query($q);
-      $Infos[User][Id] = $res[id];
-    } else {
-      $r2 = mysql_fetch_array($res2[res]);
-      $Infos[User][Id] = $r2[Id];
-      $_SESSION[User][RemiseMax] = $r2[RemiseMax];
-      $_SESSION[User][RemiseMaxPresta] = $r2[RemiseMaxPresta];
-    }
-  }else{
-    $r = mysql_fetch_array($res[res]);
-    $_SESSION[User][RemiseMax] = $r[RemiseMax];
-    $_SESSION[User][RemiseMaxPresta] = $r[RemiseMaxPresta];
-    $Infos[User][Id] = $r[Id];
-
-  }
-  $q = "UPDATE `Configuration_AdminUsers` SET Password='" . md5($Pass) . "',InfosDom='" . base64_encode(serialize($Infos)) . "',InfosDroits='" . base64_encode(serialize($InfosDroits)) . "',`NomVisible`='" . $Infos[cn][0] . "',`SipUser`='" . $Infos[pager][0] . "',`SipNumber`='" . $Infos[ipphone][0] . "' WHERE UserName='$Login'";
-  query($q);
 }
 
 function LoadInfosFromDomaine($ds, $login) {
