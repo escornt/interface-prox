@@ -28,6 +28,7 @@ else {
 
 function testDroits($droits) {
   $test = false;
+  var_dump($droits);
   foreach ($droits as $d) {
     echo $d;
     if (strcmp($d, '*admin-it*') == 0) {
