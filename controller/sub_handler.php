@@ -30,10 +30,11 @@ function testDroits($droits) {
   $test = false;
 //  var_dump($droits);
 //  die();
-  if ($droits[admin_it] == 1){
-    $test = true;
-  }
+//  if ($droits[admin_it] == 1){
+  //  $test = true;
+  //}
   foreach ($droits as $key => $d) {
+    echo "test";
     if ($d == 1){
       echo $key;
     }
