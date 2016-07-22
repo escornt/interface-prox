@@ -18,7 +18,6 @@ die();
 function Connect($Login, $Pass, &$Infos, &$InfosDroits, $server) {
 
   if (!ConnectToDomain($Login, $Pass, $Infos, $InfosDroits, $server)) {
-
     return false;
   }
   return true;
@@ -43,18 +42,6 @@ function ConnectToDomain($_Login, $Pass, &$Infos, &$InfosDroits, $server) {
     return (true);
   }
   return false;
-}
-
-function ConnectLocaly($Login, $Pass,&$Infos, &$InfosDroits) {
-  $q = "SELECT * FROM Configuration_AdminUsers WHERE Username='$Login' AND Password='" . md5($Pass) . "'";
-  $res = query($q);
-  if (!mysql_num_rows($res[res]))
-    return false;
-  $r = mysql_fetch_array($res[res]);
-  $Infos = unserialize(base64_decode($r[InfosDom]));
-  $InfosDroits = unserialize(base64_decode($r[InfosDroits]));
-  $Infos[TypeConnexion] = "Locale";
-  return true;
 }
 
 function LoadInfosFromDomaine($ds, $login) {
