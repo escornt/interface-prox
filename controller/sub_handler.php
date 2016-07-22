@@ -22,7 +22,6 @@ die();
     $_SESSION['droits'] = 1;
     //header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
   }
-}
 
 function testDroits($droits) {
   $test = false;
