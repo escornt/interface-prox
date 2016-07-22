@@ -74,7 +74,7 @@
             </div>
 
             <div class="form-group has-feedback">
-              <label class="customfont blu"><input type="checkbox" id="cbox1" name="mount"> Monter le filer à la racine de la VM</label>
+              <label class="customfont blu"><input type="checkbox" id="cbox1" name="mount" checked> Monter le filer à la racine de la VM</label>
             </div>
 
             <div class="form-group has-feedback">
