@@ -78,7 +78,8 @@
             </div>
 
             <div class="form-group has-feedback">
-              <label class="customfont blu"><input type="checkbox" id="cbox2" name="update"> Mettre les sources à jour <small><em>Nécessite le montage du filer</em></small></label>
+              <label class="customfont blu"><input type="checkbox" id="cbox2" name="update"> Mettre les sources à jour</label>
+              <small><em>Nécessite le montage du filer</em></small>
             </div>
 
   	        <button type="submit" class="btn btn-info customfont">Créer</button>
