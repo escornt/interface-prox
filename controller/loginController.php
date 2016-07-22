@@ -6,7 +6,7 @@ $droit_acces = 'admin_it';
 $Infos = array();
 $InfosDroits = array();
 $result = Connect($_POST["user"], $_POST["pswd"], $Infos, $InfosDroits, $server);
-if ($result == false || empty($_POST['user']) || empty($_POST['pswd'])){
+if (!$result){
   $_SESSION['substate'] = 1;
   header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
 }
@@ -46,7 +46,7 @@ function ConnectToDomain($_Login, $Pass, &$Infos, &$InfosDroits, $server) {
   ldap_set_option($ds, LDAP_OPT_REFERRALS, 0);
   ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3);
   $r = @ldap_bind($ds, "$Login@1001PNEUS.LOCAL", "$Pass");
-  if ($r) {
+  if ($r && || !empty($_POST['user']) || !empty($_POST['pswd'])) {
     $Infos = LoadInfosFromDomaine($ds, $Login);
     $Infos[TypeConnexion] = "Domaine";
     $InfoDroits = InitializeDroitsFromDom($ds);
