@@ -74,11 +74,11 @@
             </div>
 
             <div class="form-group has-feedback">
-              <label><input type="checkbox" id="cbox1" name="mount" class="customfont blu"> Monter le filer à la racine de la VM</label>
+              <label class="customfont blu"><input type="checkbox" id="cbox1" name="mount"> Monter le filer à la racine de la VM</label>
             </div>
 
             <div class="form-group has-feedback">
-              <label><input type="checkbox" id="cbox2" name="update" class="customfont blu"> Mettre les sources à jour</label>
+              <label class="customfont blu"><input type="checkbox" id="cbox2" name="update"> Mettre les sources à jour</label>
             </div>
 
   	        <button type="submit" class="btn btn-info customfont">Créer</button>
