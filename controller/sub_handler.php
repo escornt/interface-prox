@@ -39,6 +39,7 @@ function ConnectToDomain($_Login, $Pass, &$Infos, &$InfosDroits, $server) {
   if ($r) {
     $Infos = LoadInfosFromDomaine($ds, $Login);
     $Infos[TypeConnexion] = "Domaine";
+    /*
     $droits = array();
     $dn = "DC=1001pneus,DC=local";
     $filter = "(&(&(&(objectClass=group))))";
@@ -50,7 +51,8 @@ function ConnectToDomain($_Login, $Pass, &$Infos, &$InfosDroits, $server) {
       }
     }
     var_dump($droits);
-   $InfoDroits = $droits;
+    */
+   $InfoDroits = InitializeDroitsFromDom($ds);
     //InitializeDroitsFromDom($ds);
     var_dump($InfoDroits);
     return (true);
@@ -83,7 +85,7 @@ function InitializeDroitsFromDom($ds) {
     }
   }
   var_dump($droits);
-  return($droits);
+  return $droits;
 }
 
 function SetDroitsFromDomInfos($a, &$droits) {
