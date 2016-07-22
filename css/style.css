@@ -1,16 +1,3 @@
-h1, p, label {
-    color: white;
-}
-
-/*body {
-    background-image: url("/background.jpg");
-    background-repeat: no-repeat;
-    background-position: absolute;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-}*/
-
 input {
   max-width: "50%"
 }
