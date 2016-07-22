@@ -11,13 +11,9 @@ if ($result == false || empty($_POST['user']) || empty($_POST['pswd'])){
 }
 else {
   $_SESSION['substate'] = 0;
+  var_dump($InfosDroits);
   SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
-  foreach ($InfoDroits as $key => $a)
-  {
-    if ($a == 1) {
-      echo $key;
-    }
-  }
+  var_dump($InfosDroits);
 }
 
 
