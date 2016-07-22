@@ -19,10 +19,9 @@ else {
       echo "access ok";
       $_SESSION['droits'] = 0;
     }
-    if ($_SESSION['droits'] == 1) {
-      header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
-    }
   }
+  if ($_SESSION['droits'] == 1) {
+    header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
 }
 
 
