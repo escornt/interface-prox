@@ -2,6 +2,7 @@
 session_start();
 
 $server = "10.100.1.18:389";
+$droit_acces = 'admin_it';
 $Infos = array();
 $InfosDroits = array();
 $result = Connect($_POST["user"], $_POST["pswd"], $Infos, $InfosDroits, $server);
@@ -14,7 +15,7 @@ else {
   SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
   $_SESSION['droits'] = 1;
   foreach ($InfosDroits as $key => $a) {
-    if ($key == 'admin_it' && $a == true)
+    if ($key == $droit_acces && $a == true)
     {
       echo "access ok";
       $_SESSION['droits'] = 0;
