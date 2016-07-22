@@ -71,7 +71,10 @@ function InitializeDroitsFromDom($ds) {
       $droits[$m[1]] = 0;
     }
   }
+
+  var_dump($droits);
   return($droits);
+
 }
 
 function SetDroitsFromDomInfos($a, &$droits) {
