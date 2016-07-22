@@ -13,7 +13,7 @@ if ($result == false || empty($_POST['user']) || empty($_POST['pswd'])){
 
 $_SESSION['substate'] = 0;
 SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
-$_SESSION['droits'] = 1;
+$_SESSION['droits'] = 0;
 foreach ($InfosDroits as $key => $a) {
   if ($key == $droit_acces && $a == true)
   {
