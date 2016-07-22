@@ -16,3 +16,7 @@ input {
 .fs1 {font-size: 21px;}
 .fs2 {font-size: 36px;}
 .blu {color: #5AB5ED;}
+
+::-webkit-input-placeholder {
+   font-style: italic;
+}
