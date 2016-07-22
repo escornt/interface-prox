@@ -3,7 +3,7 @@
   <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Interface proxmox</title>
+      <title>Interface Proxmox</title>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
       <link rel="stylesheet" href="css/style.css" />
       <link href="https://fonts.googleapis.com/css?family=Changa" rel="stylesheet">
@@ -11,6 +11,6 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <p>HELLOOOO</p>
+
  </body>
 </html>
