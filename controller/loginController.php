@@ -17,8 +17,8 @@ $_SESSION['droits'] = 1;
 foreach ($InfosDroits as $key => $a) {
   if ($key == $droit_acces && $a == true)
   {
-    echo "access ok";
     $_SESSION['droits'] = 0;
+    header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
   }
   }
   if ($_SESSION['droits'] == 1) {
