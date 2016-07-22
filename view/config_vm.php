@@ -20,19 +20,19 @@
     <div class="row">
       <div class="col-xs-6 col-md-offset-2">
           <form class="form-vertical" role="form" method="POST" action="/controller/loginController.php">
-//ID
+// ID
             <div class="form-group has-feedback">
               <label for="ID VM" class="blu customfont">ID VM</label>
               <input type="id" name="ID" class="form-control" id="ID VM" placeholder="(ex : 145)">
               <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
             </div>
-//Nom
+// Nom
             <div class="form-group has-feedback">
               <label for="nom_vm" class="blu customfont">Nom VM</label>
               <input type="nom_vm" name="nom_vm" class="form-control" id="nom_vm" placeholder="(ex : VM145)">
               <span class="glyphicon glyphicon-tag form-control-feedback blu"></span>
             </div>
-//Passwd
+/* Passwd */
             <div class="form-group has-feedback">
               <label for="password" class="blu customfont">Mot de passe</label>
               <input type="password" name="password" class="form-control" id="password" placeholder="(ex : password)">
