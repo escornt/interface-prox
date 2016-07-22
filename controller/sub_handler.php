@@ -11,9 +11,10 @@ if ($result == false || empty($_POST['user']) || empty($_POST['pswd'])){
 }
 else {
   $_SESSION['substate'] = 0;
-  echo "OK";
+  SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
+  var_dump($InfoDroits);
 }
-die();
+
 
 function Connect($Login, $Pass, &$Infos, &$InfosDroits, $server) {
 
