@@ -28,7 +28,7 @@
             <div class="form-group has-feedback">
               <label for="nom_vm" class="blu customfont">Nom VM</label>
               <input type="nom_vm" name="nom_vm" class="form-control" id="nom_vm" placeholder="(ex : VM145)">
-              <span class="glyphicon glyphicon-lock form-control-feedback blu"></span>
+              <span class="glyphicon glyphicon-tag form-control-feedback blu"></span>
             </div>
   	        <button type="submit" class="btn btn-info customfont">Créer</button>
           </form>
