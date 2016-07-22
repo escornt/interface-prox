@@ -26,7 +26,7 @@
               <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
             </div>
             <div class="form-group has-feedback">
-              <label for="nom_vm">Nom VM</label>
+              <label for="nom_vm" class="blu customfont">Nom VM</label>
               <input type="nom_vm" name="nom_vm" class="form-control" id="nom_vm" placeholder="(ex : VM145)">
               <span class="glyphicon glyphicon-lock form-control-feedback blu"></span>
             </div>
