@@ -4,7 +4,7 @@ session_start();
 $Infos = array();
 $InfosDroits = array();
 $result = Connect($_POST["user"], $_POST["pswd"], $Infos, $InfosDroits);
-if ($r == false || empty($_POST['user']) || empty($_POST['pswd'])){
+if ($result == false || empty($_POST['user']) || empty($_POST['pswd'])){
   $_SESSION['substate'] = 1;
   header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
 }
