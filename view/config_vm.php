@@ -49,7 +49,7 @@
               <label for="Espace disque" class="blu customfont">Espace Disque (MB)</label>
               <input type="number" min="512" name="disk_size" class="form-control" id="disk_size" value="512">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
-              <small>Recommandation => 4000 MB</small>
+              <div class="m3"><small>Recommandation => 4000 MB</small></div>
             </div>
 
   	        <button type="submit" class="btn btn-info customfont">Créer</button>
