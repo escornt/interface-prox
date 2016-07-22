@@ -9,6 +9,7 @@ $result = Connect($_POST["user"], $_POST["pswd"], $Infos, $InfosDroits, $server)
 if ($result == false) {
   $_SESSION['substate'] = 1;
   header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
+  die ();
 } else {
 $_SESSION['substate'] = 0; }
 SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
@@ -16,10 +17,12 @@ foreach ($InfosDroits as $key => $a) {
   if ($key == $droit_acces && $a == true) {
     $_SESSION['droits'] = 0;
     header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
+    die ();
     }
   }
 $_SESSION['droits'] = 1;
 header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
+die ();
 
 
 
