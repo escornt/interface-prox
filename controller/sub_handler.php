@@ -24,7 +24,7 @@ function Connect($Login, $Pass, &$Infos, &$InfosDroits, $server) {
   return true;
 }
 
-function ConnectToDomain($_Login, $Pass, &$Infos, &$InfosDroits, $server) {
+function ConnectToDomain($_Login, $Pass, &$Infos, $InfosDroits, $server) {
 
   /* Initialisation de la connexion */
   $loginInfo=explode('@',$_Login);
