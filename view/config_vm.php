@@ -73,6 +73,14 @@
               <div class="m3"><em><small>Recommandation mini --> 4000 MB </small></em></div>
             </div>
 
+            <div class="form-group has-feedback">
+              <label><input type="checkbox" id="cbox1" name="mount">Monter le filer à la racine de la VM</label>
+            </div>
+
+            <div class="form-group has-feedback">
+              <label><input type="checkbox" id="cbox2" name="update">Mettre les sources à jour</label>
+            </div>
+
   	        <button type="submit" class="btn btn-info customfont">Créer</button>
           </form>
       </div><!-- /.col-xs-4 col-md-offset-4  -->
