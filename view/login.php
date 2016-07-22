@@ -20,7 +20,7 @@
   <div class="row">
     <div class="col-xs-4 col-md-offset-4">
       <div class="login-box-body">
-        <form class="form-vertical" role="form" method="POST" action="/controller/sub_handler.php">
+        <form class="form-vertical" role="form" method="POST" action="/controller/loginController.php">
           <div class="form-group has-feedback">
             <input type="usr" name="user" class="form-control" id="usr" placeholder="User">
             <span class="glyphicon glyphicon-user form-control-feedback blu"></span>
