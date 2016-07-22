@@ -42,6 +42,7 @@ function ConnectToDomain($_Login, $Pass, &$Infos, &$InfosDroits, $server) {
     $Infos = LoadInfosFromDomaine($ds, $Login);
     $Infos[TypeConnexion] = "Domaine";
     $InfosDroits = InitializeDroitsFromDom($ds);
+    var_dump($InfoDroits);
     return (true);
   }
   return false;
@@ -72,7 +73,6 @@ function InitializeDroitsFromDom($ds) {
     }
   }
 
-  var_dump($droits);
   return($droits);
 
 }
