@@ -13,8 +13,7 @@ else {
   $_SESSION['substate'] = 0;
   var_dump($InfoDroits);
   SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
-  var_dump($InfoDroits);
-  var_dump($Infos);
+
 }
 
 
@@ -72,9 +71,8 @@ function InitializeDroitsFromDom($ds) {
       $droits[$m[1]] = 0;
     }
   }
-
+  var_dump($droits);
   return($droits);
-
 }
 
 function SetDroitsFromDomInfos($a, &$droits) {
