@@ -22,16 +22,16 @@ else {
   }
   else {
     $_SESSION['droits'] = 1;
-    //header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
+    header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
   }
 }
 
 function testDroits($droits) {
   $test = false;
-  var_dump($droits);
+  //var_dump($droits);
   foreach ($droits as $key => $d) {
-    echo $key;
-    if (strcmp($key, '*admin-it*') == 0) {
+    //echo $key;
+    if (strcmp($key, 'admin_it') == 0) {
       $test = true;
     }
   }
