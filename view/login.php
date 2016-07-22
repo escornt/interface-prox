@@ -7,8 +7,8 @@
       <title>Portail Interface Proxmox</title>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
       <link rel="stylesheet" href="/css/style.css" />
-      <link rel="shortcut icon" href="/css/favicon.ico">
-      <link href="https://fonts.googleapis.com/css?family=Changa" rel="stylesheet">
+      <link rel="shortcut icon" href="/css/favicon.ico" />
+      <link href="https://fonts.googleapis.com/css?family=Changa" rel="stylesheet" />
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
