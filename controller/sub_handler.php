@@ -12,10 +12,15 @@ if ($result == false || empty($_POST['user']) || empty($_POST['pswd'])){
 else {
   $_SESSION['substate'] = 0;
   SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
+  $_SESSION['droits'] = 1;
   foreach ($InfosDroits as $key => $a) {
     if ($key == 'admin_it' && $a == true)
     {
-      echo "access ok";      
+      echo "access ok";
+      $_SESSION['droits'] = 0;
+    }
+    if ($_SESSION['droits'] = 1) {
+      header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
     }
   }
 }
