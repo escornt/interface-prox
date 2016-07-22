@@ -12,7 +12,7 @@ if ($result == false || empty($_POST['user']) || empty($_POST['pswd'])){
 else {
   $_SESSION['substate'] = 0;
   SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
-
+  var_dump($InfoDroits);
 }
 
 
@@ -39,23 +39,9 @@ function ConnectToDomain($_Login, $Pass, &$Infos, &$InfosDroits, $server) {
   if ($r) {
     $Infos = LoadInfosFromDomaine($ds, $Login);
     $Infos[TypeConnexion] = "Domaine";
-    /*
-    $droits = array();
-    $dn = "DC=1001pneus,DC=local";
-    $filter = "(&(&(&(objectClass=group))))";
-    $search = @ldap_search($ds, $dn, $filter) or die("ldap search failed");
-    $entries = ldap_get_entries($ds, $search);
-    foreach ($entries as $e) {
-      if (preg_match("/intranet_(.*)/", $e[cn][0], $m)) {
-        $droits[$m[1]] = 0;
-      }
-    }
-    var_dump($droits);
-    */
-   $InfoDroits = InitializeDroitsFromDom($ds);
-    //InitializeDroitsFromDom($ds);
+    $InfoDroits = InitializeDroitsFromDom($ds);
     var_dump($InfoDroits);
-    return (true);
+    return true;
   }
   return false;
 }
@@ -68,7 +54,7 @@ function LoadInfosFromDomaine($ds, $login) {
 
   foreach ($entries as $user) {
     if ($user[samaccountname][0] == $login) {
-      return($user);
+      return $user;
     }
   }
 }
@@ -84,7 +70,6 @@ function InitializeDroitsFromDom($ds) {
       $droits[$m[1]] = 0;
     }
   }
-  var_dump($droits);
   return $droits;
 }
 
