@@ -28,9 +28,15 @@ else {
 
 function testDroits($droits) {
   $test = false;
-  //var_dump($droits);
+  var_dump($droits);
+  die();
+  if ($droits[admin_it] == 1){
+    $test = true;
+  }
   foreach ($droits as $key => $d) {
-    //echo $key;
+    echo $key;
+    echo "\n";
+
     if (strcmp($key, 'admin_it') == 0) {
       $test = true;
     }
