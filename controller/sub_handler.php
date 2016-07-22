@@ -10,20 +10,20 @@ if ($result == false || empty($_POST['user']) || empty($_POST['pswd'])){
   $_SESSION['substate'] = 1;
   header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
 }
-else {
-  $_SESSION['substate'] = 0;
-  SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
-  $_SESSION['droits'] = 1;
-  foreach ($InfosDroits as $key => $a) {
-    if ($key == $droit_acces && $a == true)
-    {
-      echo "access ok";
-      $_SESSION['droits'] = 0;
-    }
+
+$_SESSION['substate'] = 0;
+SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
+$_SESSION['droits'] = 1;
+foreach ($InfosDroits as $key => $a) {
+  if ($key == $droit_acces && $a == true)
+  {
+    echo "access ok";
+    $_SESSION['droits'] = 0;
+  }
   }
   if ($_SESSION['droits'] == 1) {
     header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
-}
+  }
 
 
 function Connect($Login, $Pass, &$Infos, &$InfosDroits, $server) {
