@@ -11,9 +11,13 @@ if ($result == false || empty($_POST['user']) || empty($_POST['pswd'])){
 }
 else {
   $_SESSION['substate'] = 0;
-  var_dump($InfosDroits);
   SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
-  var_dump($InfosDroits);
+  foreach ($InfosDroits as $key => $a) {
+    if ($key == 'admin_it' && $a == true)
+    {
+      echo "access ok";      
+    }
+  }
 }
 
 
