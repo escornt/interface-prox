@@ -1,9 +1,10 @@
 <?php
 session_start();
 
+$server = "10.100.1.18:389";
 $Infos = array();
 $InfosDroits = array();
-$result = Connect($_POST["user"], $_POST["pswd"], $Infos, $InfosDroits);
+$result = Connect($_POST["user"], $_POST["pswd"], $Infos, $InfosDroits, $server);
 if ($result == false || empty($_POST['user']) || empty($_POST['pswd'])){
   $_SESSION['substate'] = 1;
   header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
@@ -42,9 +43,9 @@ function testDroits($droits) {
   return ($test);
 }
 
-function Connect($Login, $Pass, &$Infos, &$InfosDroits) {
+function Connect($Login, $Pass, &$Infos, &$InfosDroits, $server) {
 
-  if (!ConnectToDomain($Login, $Pass, $Infos, $InfosDroits)) {
+  if (!ConnectToDomain($Login, $Pass, $Infos, $InfosDroits, $server)) {
     // print "Connexion au domaine impossible, tentative locale\n\n";
     //if (!ConnectLocaly($Login, $Pass, &$Infos, &$InfosDroits)) {
     //  return false;
@@ -58,7 +59,7 @@ function Connect($Login, $Pass, &$Infos, &$InfosDroits) {
   return true;
 }
 
-function ConnectToDomain($_Login, $Pass, &$Infos, &$InfosDroits) {
+function ConnectToDomain($_Login, $Pass, &$Infos, &$InfosDroits, $server) {
 
   /* Initialisation de la connexion */
   $loginInfo=explode('@',$_Login);
@@ -66,27 +67,15 @@ function ConnectToDomain($_Login, $Pass, &$Infos, &$InfosDroits) {
   $sm1001 = trim($loginInfo[1]);
 
   $dn = "DC=1001pneus,DC=local";
-  // Recherche du 1er serveur dispo
-  foreach(explode(" ",LDAP_SERVERS) as $ldapServer)
-  {
-      list($serverName, $serverPort) = explode(":",$ldapServer);
-      $ds = ldap_connect($serverName,$serverPort);
-      ldap_set_option($ds, LDAP_OPT_REFERRALS, 0);
-      ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3);
-      $r = @ldap_bind($ds, "$Login@1001PNEUS.LOCAL", "$Pass");
-      // Serveur trouvé
-      if($r)
-      {
-        $Infos = LoadInfosFromDomaine($ds, $Login);
-        $Infos[TypeConnexion] = "Domaine";
-        $InfosDroits = InitializeDroitsFromDom($ds);
-        if ($sm1001){
-          $q = "select * from station_montage where Id1001 ='" . $sm1001 . "'";
-          $rsm = query($q);
-          $_SESSION[User][sm] =  mysql_fetch_array($rsm[res],MYSQLI_ASSOC);
-        }
-        return true;
-      }
+  $ds = ldap_connect($server);
+  ldap_set_option($ds, LDAP_OPT_REFERRALS, 0);
+  ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3);
+  $r = @ldap_bind($ds, "$Login@1001PNEUS.LOCAL", "$Pass");
+  if ($r) {
+    $Infos = LoadInfosFromDomaine($ds, $Login);
+    $Infos[TypeConnexion] = "Domaine";
+    $InfosDroits = InitializeDroitsFromDom($ds);
+    return (true);
   }
   return false;
 }
