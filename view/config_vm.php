@@ -47,8 +47,9 @@
 
             <div class="form-group has-feedback">
               <label for="Espace disque" class="blu customfont">Espace Disque (MB)</label>
-              <input type="number" name="disk_size" class="form-control" id="disk_size" placeholder="(recommandé : 4000)">
+              <input type="number" min="512" name="disk_size" class="form-control" id="disk_size" value="512">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
+              <small>Recommandation => 4000 MB</small>
             </div>
 
   	        <button type="submit" class="btn btn-info customfont">Créer</button>
