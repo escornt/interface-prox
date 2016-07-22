@@ -21,7 +21,7 @@
       <div class="col-xs-6 col-md-offset-2">
           <form class="form-vertical" role="form" method="POST" action="/controller/loginController.php">
             <div class="form-group has-feedback">
-              <label for="ID VM">ID VM</label>
+              <label for="ID VM" class="blu customfont">ID VM</label>
               <input type="id" name="ID" class="form-control" id="ID VM" placeholder="(ex : 145)">
               <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
             </div>
