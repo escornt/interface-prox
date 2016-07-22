@@ -47,18 +47,25 @@
 <!-- Espace Disque -->
             <div class="form-group has-feedback">
               <label for="Espace disque" class="blu customfont">Espace Disque (BG)</label>
-              <input type="number" min="1" name="disk_size" class="form-control" id="disk_size" value="1">
+              <input type="number" min="1" max="1000" name="disk_size" class="form-control" id="disk_size" value="1">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
               <div class="m3"><em><small>Recommandation mini --> 15 GB</small></em></div>
+            </div>
+<!-- CPUs -->
+            <div class="form-group has-feedback">
+              <label for="CPU" class="blu customfont">CPUs</label>
+              <input type="number" min="1" name="CPU" class="form-control" id="CPU" value="1">
+              <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
+              <div class="m3"><em><small>Recommandation mini --> 1</small></em></div>
             </div>
 <!-- RAM -->
             <div class="form-group has-feedback">
               <label for="RAM" class="blu customfont">RAM (MB)</label>
-              <input type="number" min="512" name="RAM" class="form-control" id="RAM" value="512">
+              <input type="number" min="512" max="16000" name="RAM" class="form-control" id="RAM" value="512">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
               <div class="m3"><em><small>Recommandation mini --> 4000 MB </small></em></div>
             </div>
-
+<!-- Swap -->
   	        <button type="submit" class="btn btn-info customfont">Créer</button>
           </form>
       </div><!-- /.col-xs-4 col-md-offset-4  -->
