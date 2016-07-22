@@ -11,6 +11,7 @@ if ($result == false || empty($_POST['user']) || empty($_POST['pswd'])){
 }
 else {
   $_SESSION['substate'] = 0;
+  var_dump($InfoDroits);
   SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
   var_dump($InfoDroits);
   var_dump($Infos);
