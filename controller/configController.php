@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require_once 'http://interface-prox.www.1001pneus.fr/pve2_api.class.php';
 $hostname = "10.100.1.19";
 $user = "VM_DEPLOY";
 $realm = "Linux PAM standard authentication";
