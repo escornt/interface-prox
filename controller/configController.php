@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once("/pve2_api.class.php");
 $hostname = "10.100.1.19";
 $user = "VM_DEPLOY";
 $realm = "Linux PAM standard authentication";
