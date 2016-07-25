@@ -12,6 +12,6 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <img src="/css/warning-general-2.gif">
+    <img src="/css/warning-general-2.gif style="margin-left: 8">
     <div class="wred customfont">Impossible de joindre le serveur proxmox :/</div>
   </body>
