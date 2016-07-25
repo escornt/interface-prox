@@ -85,11 +85,11 @@
             </div>
 
             <?php if ($_SESSION['ok-pass'] == 1): ?>
-              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur</strong><br/>Renseignez et confirmez un mot de passe valide.</div>
+              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur,</strong><br/>Renseignez et confirmez un mot de passe valide.</div>
             <?php endif; ?>
 
             <?php if ($_SESSION['ok-empty'] == 1): ?>
-              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur</strong><br/>Pour valider le formulaire, aucun champ me doit être laissé vide.</div>
+              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur,</strong><br/>Pour valider le formulaire, aucun champ me doit être laissé vide.</div>
             <?php endif; ?>
 
   	        <button type="submit" class="btn btn-info customfont">Créer</button>
