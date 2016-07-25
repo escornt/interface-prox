@@ -2,7 +2,7 @@
 session_start();
 require_once(__DIR__ . "/../pve2_api.class.php");
 $hostname = "10.100.1.19";
-$user = "VM_DEPLOY";
+$user = "VM_DEPLO";
 $realm = "pve";
 $password = "VKqdVZNHKyQD";
 
@@ -22,9 +22,10 @@ $_SESSION['ok-pass'] = 0;
 $pve2 = new PVE2_API($hostname, $user, $realm, $password);
 if ($pve2->login()) {
     $nodes = $pve2->get_node_list();
-    var_dump($nodes);
+
 } else {
-    print("Login to Proxmox Host failed.\n");
+    header('Location: http://interface-prox.www.1001pneus.fr/view/prox_fail.php');
+    die();
 }
 //header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
 ?>
