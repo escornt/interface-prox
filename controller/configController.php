@@ -19,7 +19,7 @@ if ($_POST['password'] != $_POST['conf-password'] || strlen($_POST['password']) 
   die();
 }
 $_SESSION['ok-pass'] = 0;
-$pve = new PVE2_API($hostname, $user, $realm, $password);
+$pve2 = new PVE2_API($hostname, $user, $realm, $password);
 if ($pve2->login()) {
     foreach ($pve2->get_node_list() as $node_name) {
         print_r($pve2->get("/nodes/".$node_name."/status"));
