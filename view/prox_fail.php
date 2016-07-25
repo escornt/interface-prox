@@ -13,5 +13,5 @@
   </head>
   <body>
     <img src="/css/warning-general-2.gif">
-    <div class="wred customfont"></div>
+    <div class="wred customfont">Impossible de joindre le serveur proxmox :/</div>
   </body>
