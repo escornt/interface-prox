@@ -85,7 +85,7 @@
             </div>
 
             <?php if ($_SESSION['ok-pass'] == 1): ?>
-              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur</strong> renseignez et de confirmez un mot de passe valide.</div>
+              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur</strong> Renseignez et confirmez un mot de passe valide.</div>
             <?php endif; ?>
 
             <?php if ($_SESSION['ok-empty'] == 1): ?>
