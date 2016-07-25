@@ -29,7 +29,8 @@ if ($pve2->login()) {
     unset($nodes);
     $test = ($pve2->get_next_vmid());
     echo $test;
-    /*$new_container_settings = array();
+
+    $new_container_settings = array();
     $new_container_settings['ostemplate'] = "local:vztmpl/" . $template;
     $new_container_settings['vmid'] = $_POST['ID'];
     $new_container_settings['cpus'] = $_POST['CPU'];
@@ -37,7 +38,10 @@ if ($pve2->login()) {
     $new_container_settings['disk'] = $_POST['disk_size'];
     $new_container_settings['hostname'] = $_POST['nom_vm'];
     $new_container_settings['memory'] = $_POST['RAM'];
-    $new_container_settings['nameserver'] = "4.2.2.1";*/
+    $new_container_settings['swap'] = $_PORT['swap'];
+    $new_container_settings['password'] = $_PORT['password']
+    print_r($pve2->post("/nodes/".$first_node."/openvz", $new_container_settings));
+
 } else {
     $_SESSION['ok-log'] = 1;
     header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
