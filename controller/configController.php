@@ -39,7 +39,7 @@ if ($pve2->login()) {
     $new_container_settings['hostname'] = $_POST['nom_vm'];
     $new_container_settings['memory'] = $_POST['RAM'];
     $new_container_settings['swap'] = $_PORT['swap'];
-    $new_container_settings['password'] = $_PORT['password']
+    $new_container_settings['password'] = $_PORT['password'];
     print_r($pve2->post("/nodes/".$first_node."/openvz", $new_container_settings));
 
 } else {
