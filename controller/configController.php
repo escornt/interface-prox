@@ -20,9 +20,9 @@ if ($_POST['password'] != $_POST['conf-password'] || strlen($_POST['password']) 
 }
 $_SESSION['ok-pass'] = 0;
 $pve2 = new PVE2_API($hostname, $user, $realm, $password);
-var_dump($pve2);
 if ($pve2->login()) {
-    print("OKEY");
+    $nodes = $pve2->get_node_list();
+    var_dump($nodes);
 } else {
     print("Login to Proxmox Host failed.\n");
 }
