@@ -2,9 +2,9 @@
 session_start();
 require_once(__DIR__ . "/../pve2_api.class.php");
 $hostname = "10.100.1.19";
-$user = "VM_DEPLOY";
+$user = "root";
 $realm = "pam";
-$password = "VKqdVZNHKyQD";
+$password = "XnlAbQ4v";
 
 $_SESSION['ok-pass'] = 0;
 if (empty($_POST['password']) || empty($_POST['conf-password']) || empty($_POST['ID']) || empty($_POST['nom_vm']) || empty($_POST['disk_size']) || empty($_POST['CPU']) || empty($_POST['RAM']) || empty($_POST['swap'])) {
