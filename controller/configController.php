@@ -1,8 +1,7 @@
 <?php
 if ($_POST['password'] != $_POST['conf-password']) {
   $_SESSION['ok-pass'] = 1;
-  echo 'mauvais pass';
-  // header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
+  header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
   die();
 }
 $_SESSION['ok-pass'] = 0;
