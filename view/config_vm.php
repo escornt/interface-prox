@@ -19,7 +19,7 @@
     </div><!-- /.row -->
     <div class="row">
       <div class="col-xs-4 col-md-offset-4">
-          <form class="form-vertical" role="form" method="POST" action="/controller/loginController.php">
+          <form class="form-vertical" role="form" method="POST" action="/controller/configController.php">
 <!-- ID VM -->
             <div class="form-group has-feedback">
               <label for="ID VM" class="blu customfont">ID VM</label>
@@ -81,6 +81,10 @@
               <label class="customfont blu"><input type="checkbox" id="cbox2" name="update"> Mettre les sources à jour</label>
               <small><em>Nécessite le montage du filer</em></small>
             </div>
+
+            <?php if ($_SESSION['ok-pass'] == 1): ?>
+              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Echec de l'authentification, mauvais identifiants.</div>
+            <?php endif; ?>
 
   	        <button type="submit" class="btn btn-info customfont">Créer</button>
           </form>
