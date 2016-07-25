@@ -38,6 +38,7 @@
               <label for="password" class="blu customfont">Mot de passe</label>
               <input type="password" name="password" class="form-control" id="password" placeholder="(ex : password)">
               <span class="glyphicon glyphicon-lock form-control-feedback blu"></span>
+              <div class="m3"><em><small>Minimum 5 caractères</small></em></div>
             </div>
 <!-- Confimation mot de passe -->
             <div class="form-group has-feedback">
@@ -84,7 +85,11 @@
             </div>
 
             <?php if ($_SESSION['ok-pass'] == 1): ?>
-              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Erreur lors de la de la confirmation du mot de passe.</div>
+              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur</strong> renseignez et de confirmez un mot de passe valide.</div>
+            <?php endif; ?>
+
+            <?php if ($_SESSION['ok-empty'] == 1): ?>
+              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur</strong> Pour valider le formulaire, aucun champ me doit être laissé vide.</div>
             <?php endif; ?>
 
   	        <button type="submit" class="btn btn-info customfont">Créer</button>
