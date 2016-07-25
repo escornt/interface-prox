@@ -96,6 +96,7 @@ class PVE2_API {
 		if (!$login_ticket) {
 			// SSL negotiation failed or connection timed out
 			$this->login_ticket_timestamp = null;
+			echo 'FAIL AU LOGIN TICKET';
 			return false;
 		}
 
