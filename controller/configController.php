@@ -2,9 +2,9 @@
 session_start();
 require_once(__DIR__ . "/../pve2_api.class.php");
 $hostname = "10.100.1.19";
-$user = "VM_DEPLOY";
-$realm = "pve";
-$password = "VKqdVZNHKyQD";
+$user = "root";
+$realm = "pam";
+$password = "bbrother";
 
 $_SESSION['ok-pass'] = 0;
 if (empty($_POST['password']) || empty($_POST['conf-password']) || empty($_POST['ID']) || empty($_POST['nom_vm']) || empty($_POST['disk_size']) || empty($_POST['CPU']) || empty($_POST['RAM']) || empty($_POST['swap'])) {
@@ -23,7 +23,7 @@ $pve2 = new PVE2_API($hostname, $user, $realm, $password);
 var_dump($pve2);
 if ($pve2->login()) {
     foreach ($pve2->get_node_list() as $node_name) {
-        print_r($pve2->get("/nodes/".$node_name."/status"));
+        print_r($pve2->get("/nodes/".$node_name."/status\n"));
     }
 } else {
     print("Login to Proxmox Host failed.\n");
