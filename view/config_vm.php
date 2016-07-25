@@ -83,7 +83,7 @@
             </div>
 
             <?php if ($_SESSION['ok-pass'] == 1): ?>
-              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Echec de l'authentification, mauvais identifiants.</div>
+              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Erreur lors de la de la confirmation du mot de passe.</div>
             <?php endif; ?>
 
   	        <button type="submit" class="btn btn-info customfont">Créer</button>
