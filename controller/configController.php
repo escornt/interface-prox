@@ -21,10 +21,12 @@ if ($_POST['password'] != $_POST['conf-password'] || strlen($_POST['password']) 
 $_SESSION['ok-pass'] = 0;
 $pve2 = new PVE2_API($hostname, $user, $realm, $password);
 if ($pve2->login()) {
+    $_SESSION['ok-log'] = 0;
     $nodes = $pve2->get_node_list();
 
 } else {
-    header('Location: http://interface-prox.www.1001pneus.fr/view/prox_fail.php');
+    $_SESSION['ok-log'] = 1;
+    header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
     die();
 }
 //header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
