@@ -44,7 +44,7 @@ if ($pve2->login()) {
     while ($i < 15) {
       $current_status = ($pve2->get_vm_status($first_node, $_POST['ID']));
       var_dump($current_status);
-      sleep (60);
+    
       $i = $i + 1;
     }
 
