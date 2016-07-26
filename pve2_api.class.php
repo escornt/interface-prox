@@ -318,9 +318,9 @@ class PVE2_API {
 		}
 	}
 
-	public function get_vm_status($node, $id)
+	public function get_vm_status ($node, $id)
 	 {
-	  $status = $this->get("/api2/json/nodes/$node/lxc/$id/status/");
+	  $status = $this->get("/nodes/$node/lxc/$id/status/");
 		var_dump($status);
 	  if ($status == null) {
 	    return false;
