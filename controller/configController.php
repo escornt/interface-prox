@@ -28,7 +28,6 @@ if ($pve2->login()) {
     $first_node = $nodes[0];
     unset($nodes);
     $test = ($pve2->get_next_vmid());
-    $current_status = ($pve2->get_vm_status($first_node, $_POST['ID']));
 
     $new_container_settings = array();
     $new_container_settings['ostemplate'] = "local:vztmpl/" . $template;
@@ -43,6 +42,7 @@ if ($pve2->login()) {
     $pve2->post("/nodes/".$first_node."/openvz", $new_container_settings);
     $i = 0;
     while ($i < 15) {
+      $current_status = ($pve2->get_vm_status($first_node, $_POST['ID']));
       var_dump($current_status);
       sleep (60);
       $i = $i + 1;
