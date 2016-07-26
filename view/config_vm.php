@@ -30,7 +30,7 @@
 <!-- Nom VM -->
             <div class="form-group has-feedback">
               <label for="nom_vm" class="blu customfont">Nom VM</label>
-              <input type="text" name="nom_vm" class="form-control" id="nom_vm" placeholder="(ex : VM145)">
+              <input type="text" name="nom_vm" class="form-control" id="nom_vm" placeholder="(ex : VM-145)">
               <span class="glyphicon glyphicon-tag form-control-feedback blu"></span>
             </div>
 <!-- Description -->
@@ -81,7 +81,7 @@
               <div class="m3"><em><small>Recommandation mini --> 4000 MB </small></em></div>
             </div>
 
-            <div class="form-group has-feedback">
+  <!--          <div class="form-group has-feedback">
               <label class="customfont blu"><input type="checkbox" id="cbox1" name="mount" checked> Monter le filer à la racine de la VM</label>
             </div>
 
@@ -89,6 +89,7 @@
               <label class="customfont blu"><input type="checkbox" id="cbox2" name="update"> Mettre les sources à jour</label>
               <small><em>Nécessite le montage du filer</em></small>
             </div>
+  -->
 
             <?php if ($_SESSION['ok-pass'] == 1): ?>
               <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur,</strong><br/>Renseignez et confirmez un mot de passe valide.</div>
