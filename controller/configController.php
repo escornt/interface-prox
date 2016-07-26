@@ -54,14 +54,5 @@ if ($pve2->login()) {
     die();
 }
 
-function get_vm_status($node, $id)
- {
-  $status = $this->get("/nodes/$node/lxc/$id/status/current");
-  if ($status == null) {
-    return false;
-  } else {
-    return $status;
-  }
-}
 //header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
 ?>

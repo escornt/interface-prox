@@ -96,7 +96,6 @@ class PVE2_API {
 		if (!$login_ticket) {
 			// SSL negotiation failed or connection timed out
 			$this->login_ticket_timestamp = null;
-			echo 'FAIL AU LOGIN TICKET';
 			return false;
 		}
 
@@ -108,7 +107,6 @@ class PVE2_API {
 			if ($login_request_info['ssl_verify_result'] == 1) {
 				throw new PVE2_Exception("Invalid SSL cert on {$this->hostname} - check that the hostname is correct, and that it appears in the server certificate's SAN list. Alternatively set the verify_ssl flag to false if you are using internal self-signed certs (ensure you are aware of the security risks before doing so).", 4);
 			}
-			echo 'ICI';
 			return false;
 		} else {
 			// Login success.
@@ -318,6 +316,16 @@ class PVE2_API {
 		} else {
 			return $vmid;
 		}
+	}
+
+	public function get_vm_status($node, $id)
+	 {
+	  $status = $this->get("/nodes/$node/lxc/$id/status/current");
+	  if ($status == null) {
+	    return false;
+	  } else {
+	    return $status;
+	  }
 	}
 
 	/*
