@@ -45,7 +45,7 @@ if ($pve2->login()) {
     while ($i < 15) {
       var_dump($current_status);
       sleep (60);
-      i++;
+      $i = $i + 1;
     }
 
 } else {
