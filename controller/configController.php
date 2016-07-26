@@ -28,7 +28,7 @@ if ($pve2->login()) {
     $first_node = $nodes[0];
     unset($nodes);
     $test = ($pve2->get_next_vmid());
-
+    var_dump($test);
     /*$new_container_settings = array();
     $new_container_settings['ostemplate'] = "local:vztmpl/" . $template;
     $new_container_settings['vmid'] = $_POST['ID'];
