@@ -41,11 +41,11 @@ if ($pve2->login()) {
     $new_container_settings['password'] = $_POST['password'];
     $pve2->post("/nodes/".$first_node."/openvz", $new_container_settings);
     $i = 0;
-    while ($i < 15) {
-      ob_end_flush();
+    while ($i < 7) {
+
       $current_status = ($pve2->get_vm_status($first_node, $_POST['ID']));
       var_dump($current_status);
-      ob_start();
+
       sleep (60);
       $i = $i + 1;
     }
