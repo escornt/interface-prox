@@ -29,7 +29,7 @@ if ($pve2->login()) {
     unset($nodes);
     /*$test = ($pve2->get_next_vmid());
     var_dump($test);*/
-    $new_container_settings = array();
+    /*$new_container_settings = array();
     $new_container_settings['ostemplate'] = "local:vztmpl/" . $template;
     $new_container_settings['vmid'] = $_POST['ID'];
     $new_container_settings['cpus'] = $_POST['CPU'];
@@ -41,8 +41,9 @@ if ($pve2->login()) {
     $new_container_settings['password'] = $_POST['password'];
     $pve2->post("/nodes/".$first_node."/openvz", $new_container_settings);
     $current_status = ($pve2->get_vm_status($first_node, $_POST['ID']));
-    var_dump($current_status['status']);
+    var_dump($current_status['status']);*/
     $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/start");
+    $current_status = ($pve2->get_vm_status($first_node, 152));
     var_dump($current_status['status']);
 } else {
     $_SESSION['ok-log'] = 1;
