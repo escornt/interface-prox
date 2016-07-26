@@ -328,7 +328,7 @@ class PVE2_API {
 	}
 
 	public function get_task_list ($node) {
-		$node_list = $this->get("/nodes/".$node."/task/");
+		$node_list = $this->get("/nodes/".$node."/tasks/");
 		if (count($node_list) > 0) {
 			$nodes_array = array();
 			foreach ($node_list as $node) {
