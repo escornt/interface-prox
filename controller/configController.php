@@ -42,10 +42,11 @@ if ($pve2->login()) {
     $pve2->post("/nodes/".$first_node."/openvz", $new_container_settings);
     $current_status = ($pve2->get_vm_status($first_node, $_POST['ID']));
     var_dump($current_status['status']);*/
-    $current_status = ($pve2->get_vm_status($first_node, $_POST['ID']));
+    $current_status = ($pve2->get_vm_status($first_node, "first".$_POST['ID']));
     $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/start");
     $current_status = ($pve2->get_vm_status($first_node, $_POST['ID']));
     $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/stop");
+    $current_status = ($pve2->get_vm_status($first_node, $_POST['ID']));
     var_dump($current_status['status']);
 } else {
     $_SESSION['ok-log'] = 1;
