@@ -54,7 +54,7 @@ if ($pve2->login()) {
     die();
 }
 
-public function get_vm_status($node, $id)
+function get_vm_status($node, $id)
  {
   $status = $this->get("/nodes/$node/lxc/$id/status/current");
   if ($status == null) {
