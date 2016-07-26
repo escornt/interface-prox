@@ -33,6 +33,12 @@
               <input type="text" name="nom_vm" class="form-control" id="nom_vm" placeholder="(ex : VM145)">
               <span class="glyphicon glyphicon-tag form-control-feedback blu"></span>
             </div>
+<!-- Description -->
+            <div class="form-group has-feedback">
+              <label for="description" class="blu customfont">Description</label>
+              <input type="text" name="description" class="form-control" id="description" placeholder="(ex : VM de 1001user pour dev mobile)">
+              <span class="glyphicon glyphicon-tags form-control-feedback blu"></span>
+            </div>
 <!-- Mot de passe -->
             <div class="form-group has-feedback">
               <label for="password" class="blu customfont">Mot de passe</label>

@@ -33,15 +33,13 @@ if ($pve2->login()) {
     $new_container_settings['ostemplate'] = "local:vztmpl/" . $template;
     $new_container_settings['vmid'] = $_POST['ID'];
     $new_container_settings['cpus'] = $_POST['CPU'];
-    $new_container_settings['description'] = "VM 1001pneus";
+    $new_container_settings['description'] = $_POST['description'];
     $new_container_settings['disk'] = $_POST['disk_size'];
     $new_container_settings['hostname'] = $_POST['nom_vm'];
     $new_container_settings['memory'] = $_POST['RAM'];
     $new_container_settings['swap'] = $_POST['swap'];
     $new_container_settings['password'] = $_POST['password'];
-    print_r($new_container_settings);
-    print("---------------------------\n");
-    print_r($pve2->post("/nodes/".$first_node."/openvz", $new_container_settings));
+    $pve2->post("/nodes/".$first_node."/openvz", $new_container_settings);
 
 } else {
     $_SESSION['ok-log'] = 1;
