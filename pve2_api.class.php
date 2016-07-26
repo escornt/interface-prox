@@ -327,6 +327,28 @@ class PVE2_API {
 	  }
 	}
 
+	public function get_task_list ($node) {
+		$node_list = $this->get("/nodes/".$node."/task/");
+		if (count($node_list) > 0) {
+			$nodes_array = array();
+			foreach ($node_list as $node) {
+				$nodes_array[] = $node['node'];
+			}
+			return $nodes_array;
+		} else {
+			error_log(" Empty list of nodes returned in this cluster.");
+			return false;
+		}
+	}
+
+	public function get_vm_taskstatus ($node) {
+		$status = $this->get("/nodes/".$node."/task/".$id."/status");
+		if ($status == null) {
+			return false;
+		} else {
+			return $status;
+		}
+	}
 	/*
 	 * bool|string get_version ()
 	 * Return the version and minor revision of Proxmox Server
