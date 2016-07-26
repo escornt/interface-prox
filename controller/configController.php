@@ -40,7 +40,7 @@ if ($pve2->login()) {
     $new_container_settings['swap'] = $_POST['swap'];
     $new_container_settings['password'] = $_POST['password'];
     $pve2->post("/nodes/".$first_node."/openvz", $new_container_settings);
-    $task = ($pve2->get_task_list($first_node));
+    $task = ($pve2->get_vm_taskstatus($first_node));
     var_dump($task);
     /*$current_status = ($pve2->get_vm_status($first_node, $_POST['ID']));
     var_dump($current_status);*/

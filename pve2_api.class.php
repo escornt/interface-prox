@@ -342,7 +342,7 @@ class PVE2_API {
 	}
 
 	public function get_vm_taskstatus ($node) {
-		$status = $this->get("/nodes/".$node."/task/".$id."/status");
+		$status = $this->get("/nodes/".$node."/task/".$node."/status");
 		if ($status == null) {
 			return false;
 		} else {
