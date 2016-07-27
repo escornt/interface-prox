@@ -1,4 +1,4 @@
-$('#txt').click(function(){
+$('#i1').click(function(){
 
     if ($('#txt1').is(":visible")){
         $('#txt1').hide();
