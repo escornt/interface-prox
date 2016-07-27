@@ -9,3 +9,7 @@ $('#i1').click(function(){
     }
 
 });
+
+$('#txt1').load(function(){
+  $('#txt1').hide();
+});
