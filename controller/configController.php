@@ -28,7 +28,7 @@ if ($pve2->login()) {
     $first_node = $nodes[0];
     unset($nodes);
     $test = $pve2->get_vm_status($first_node, $_POST['ID']);
-    if (!$test) {
+    if ($test == false) {
       $_SESSION['ok-exist'] = 1;
       header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
       die();
