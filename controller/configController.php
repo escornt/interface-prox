@@ -41,8 +41,8 @@ if ($pve2->login()) {
     $new_container_settings['password'] = $_POST['password'];
     $task = $pve2->post("/nodes/".$first_node."/openvz", $new_container_settings);
     var_dump($task);
-    /*$current_status = ($pve2->get_vm_status($first_node, $_POST['ID']));
-    var_dump($current_status);*/
+    $current_status = ($pve2->get_vm_status($first_node, $task));
+    var_dump($current_status);
 } else {
     $_SESSION['ok-log'] = 1;
     header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
