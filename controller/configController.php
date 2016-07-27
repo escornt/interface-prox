@@ -33,7 +33,7 @@ if ($pve2->login()) {
       header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
       die();
     }
-    echo 'lol';
+    var_dump($test);
     die ();
     $_SESSION['ok-exist'] = 0;
     $new_container_settings = array();
