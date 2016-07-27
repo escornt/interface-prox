@@ -332,7 +332,7 @@ class PVE2_API {
 		if (count($node_list) > 0) {
 			$nodes_array = array();
 			foreach ($node_list as $node) {
-				$nodes_array[] = $node['node'];
+				$nodes_array[] = $node['tasks'];
 			}
 			return $nodes_array;
 		} else {
