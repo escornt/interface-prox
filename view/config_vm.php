@@ -24,8 +24,8 @@
           <form class="form-vertical" role="form" method="POST" action="/controller/configController.php">
 <!-- ID VM -->
             <div class="form-group has-feedback">
-              <label for="ID VM" class="blu customfont" id="i1">ID VM <i class="fa fa-caret-down"></i></label>
-              <div id="txt1"> <small>Dernière VM disponnible par défaut</small></div>
+              <label for="ID VM" class="blu customfont" id="i1">ID VM <i class="fa fa-caret-right"></i></label>
+              <div id="txt1"> <small>&nbsp Dernière VM disponnible par défaut</small></div>
               <input type="number" name="ID" class="form-control" id="ID VM" value="<?php echo $_SESSION['lastID'] ?>">
               <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
             </div>
