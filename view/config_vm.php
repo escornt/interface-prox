@@ -107,7 +107,9 @@
             <?php if ($_SESSION['ok-log'] == 1): ?>
               <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur,</strong><br/>Le serveur proxmox est innaccessible, réessayez plus tard.</div>
             <?php endif; ?>
-
+            <?php if ($_SESSION['ok-exist'] == 1): ?>
+              <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur,</strong><br/>Cette ID de VM est déjà utilisée.</div>
+            <?php endif; ?>
   	        <button type="submit" class="btn btn-info customfont">Créer</button>
           </form>
       </div><!-- /.col-xs-4 col-md-offset-4  -->
