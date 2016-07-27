@@ -45,6 +45,7 @@ foreach ($InfosDroits as $key => $a) {
         header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
         die ();
       }
+    $_SESSION['lastID'] = $pve2->get_next_vmid();
     header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
     die ();
     }
