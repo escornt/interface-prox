@@ -26,4 +26,5 @@ input {
 label {display: table-cell;}
 
 #txt1, #txt2, #txt3, #txt4, #txt5, #txt6, #txt7, #txt8, #txt9
-{display: table-cell;}
+{display: table-cell;
+font-style: italic;}
