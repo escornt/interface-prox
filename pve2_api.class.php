@@ -330,10 +330,6 @@ class PVE2_API {
 	public function get_task_list ($node) {
 		$node_list = $this->get("/nodes/".$node."/tasks/");
 			return $nodes_list;
-		} else {
-			error_log(" Empty list of nodes returned in this cluster.");
-			return false;
-		}
 	}
 
 	public function get_vm_taskstatus ($node) {
