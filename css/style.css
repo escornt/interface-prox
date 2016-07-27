@@ -23,4 +23,4 @@ input {
    font-style: italic;
 }
 
-label {display: inline;}
+label {display: table-cell;}
