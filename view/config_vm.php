@@ -27,7 +27,7 @@
               <label for="ID VM" class="blu customfont" id="i1">ID VM <i class="fa fa-caret-down"></i></label>
               <div id="txt1">test</div>
               <input type="number" name="ID" class="form-control" id="ID VM" value="<?php echo $_SESSION['lastID'] ?>">
-              <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
+              <span class="glyphicon glyphicon-th-large  blu"></span>
             </div>
 <!-- Nom VM -->
             <div class="form-group has-feedback">
