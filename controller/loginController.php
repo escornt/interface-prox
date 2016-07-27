@@ -1,21 +1,50 @@
 <?php
 session_start();
 
+require_once(__DIR__ . "/../pve2_api.class.php");
+
+//variables login proxmox
+
+$template = "ct_template-1.4.tar.gz";
+$hostname = "10.100.1.19";
+$user = "VM_DEPLO";
+$realm = "pve";
+$password = "VKqdVZNHKyQD";
+
+//variables login ldap
+
 $server = "10.100.1.18:389";
 $droit_acces = 'admin_it';
 $Infos = array();
 $InfosDroits = array();
+
+//connection ldap
+
 $result = Connect($_POST["user"], $_POST["pswd"], $Infos, $InfosDroits, $server);
 if ($result == false) {
   $_SESSION['substate'] = 1;
   header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
   die ();
 } else {
+
+  //Connection reussie, check des droits
+
 $_SESSION['substate'] = 0; }
 SetDroitsFromDomInfos($Infos["memberof"], $InfosDroits);
 foreach ($InfosDroits as $key => $a) {
   if ($key == $droit_acces && $a == true) {
     $_SESSION['droits'] = 0;
+
+    //Droits OK, connexion serveur proxmox
+
+    $pve2 = new PVE2_API($hostname, $user, $realm, $password);
+    if ($pve2->login()) {
+        $_SESSION['ok-log'] = 0;
+      } else {
+        $_SESSION['ok-log'] = 1;
+        header('Location: http://interface-prox.www.1001pneus.fr/view/login.php');
+        die ();
+      }
     header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
     die ();
     }

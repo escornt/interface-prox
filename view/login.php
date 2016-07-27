@@ -32,10 +32,13 @@
           </div>
 	        <button type="submit" class="btn btn-info customfont">Submit</button>
           <?php if ($_SESSION['substate'] == 1): ?>
-            <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Echec de l'authentification, mauvais identifiants.</div>
+            <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur</strong><br/>Echec de l'authentification, mauvais identifiants.</div>
           <?php endif; ?>
           <?php if ($_SESSION['droits'] == 1): ?>
-            <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Vous ne disposez pas des droits pour accéder à cette page.</div>
+            <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur</strong><br/>Vous ne disposez pas des droits pour accéder à cette page.</div>
+          <?php endif; ?>
+          <?php if ($_SESSION['ok-log'] == 1): ?>
+            <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur</strong><br/>Echec de la connexion au serveur Proxmox.</div>
           <?php endif; ?>
         </form>
       </div><!-- login-box-body -->
