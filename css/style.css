@@ -22,3 +22,5 @@ input {
 ::-webkit-input-placeholder {
    font-style: italic;
 }
+
+label {display: inline;}
