@@ -25,7 +25,7 @@
 <!-- ID VM -->
             <div class="form-group has-feedback">
               <label for="ID VM" class="blu customfont" id="i1">ID VM <i class="fa fa-caret-right"></i></label>
-              <div id="txt1"> <small>&nbsp Dernière VM disponnible par défaut</small></div>
+              <div id="txt1"> <small>&nbsp Par défaut la dernière VM disponnible est sélectionnée. Choisir une VM déjà éxistante vous redirigera vers ce formulaire.</small></div>
               <input type="number" name="ID" class="form-control" id="ID VM" value="<?php echo $_SESSION['lastID'] ?>">
               <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
             </div>
