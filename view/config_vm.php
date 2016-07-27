@@ -24,7 +24,7 @@
           <form class="form-vertical" role="form" method="POST" action="/controller/configController.php">
 <!-- ID VM -->
             <div class="form-group has-feedback">
-              <label for="ID VM" class="blu customfont" id="i1">ID VM</label>
+              <div class="blu customfont" id="i1">ID VM</div>
               <div id="txt1" style="visibility: hidden;">test</div>
               <input type="number" name="ID" class="form-control" id="ID VM" value="<?php echo $_SESSION['lastID'] ?>">
               <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
