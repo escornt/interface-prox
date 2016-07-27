@@ -1,4 +1,4 @@
-$('#i1').click(function(){
+/*$('#i1').click(function(){
 
     if ($('#txt1').is(":visible")){
         $('#txt1').hide();
@@ -8,6 +8,14 @@ $('#i1').click(function(){
         $('#txt1').show();
     }
 
+});*/
+
+$("#i1").mousenter(function(){
+    $('txt1').show();
+});
+
+$("#i1").mousleave(function(){
+    $('txt1').hide();
 });
 
 $('#txt1').load(function(){
