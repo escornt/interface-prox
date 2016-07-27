@@ -24,32 +24,32 @@
 <!-- ID VM -->
             <div class="form-group has-feedback">
               <label for="ID VM" class="blu customfont">ID VM</label>
-              <input type="number" name="ID" class="form-control" id="ID VM" placeholder="<?php echo $_SESSION['lastID'] ?>">
+              <input type="number" name="ID" class="form-control" id="ID VM" value="<?php echo $_SESSION['lastID'] ?>">
               <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
             </div>
 <!-- Nom VM -->
             <div class="form-group has-feedback">
               <label for="nom_vm" class="blu customfont">Nom VM</label>
-              <input type="text" name="nom_vm" class="form-control" id="nom_vm" placeholder="(ex : VM-145)">
+              <input type="text" name="nom_vm" class="form-control" id="nom_vm" value="<?php echo "VM".$_SESSION['lastID'] ?>">
               <span class="glyphicon glyphicon-tag form-control-feedback blu"></span>
             </div>
 <!-- Description -->
             <div class="form-group has-feedback">
               <label for="description" class="blu customfont">Description</label>
-              <input type="text" name="description" class="form-control" id="description" placeholder="(ex : VM de 1001user pour dev mobile)">
+              <input type="text" name="description" class="form-control" id="description" value="VM de dev 1001pneus">
               <span class="glyphicon glyphicon-tags form-control-feedback blu"></span>
             </div>
 <!-- Mot de passe -->
             <div class="form-group has-feedback">
               <label for="password" class="blu customfont">Mot de passe</label>
-              <input type="password" name="password" class="form-control" id="password" placeholder="(ex : password)">
+              <input type="password" name="password" class="form-control" id="password">
               <span class="glyphicon glyphicon-lock form-control-feedback blu"></span>
               <div class="m3"><em><small>Minimum 5 caractères</small></em></div>
             </div>
 <!-- Confimation mot de passe -->
             <div class="form-group has-feedback">
               <label for="password" class="blu customfont">Confirmer mot de passe</label>
-              <input type="password" name="conf-password" class="form-control" id="conf-password" placeholder="(ex : password)">
+              <input type="password" name="conf-password" class="form-control" id="conf-password">
               <span class="glyphicon glyphicon-lock form-control-feedback blu"></span>
             </div>
 <!-- Espace Disque -->
