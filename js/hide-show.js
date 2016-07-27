@@ -5,7 +5,7 @@ $('#i1').click(function(){
     }
     else
     {
-        $('#txt1').close();
+        $('#txt1').show();
     }
 
 });
