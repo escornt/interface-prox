@@ -329,12 +329,7 @@ class PVE2_API {
 
 	public function get_task_list ($node) {
 		$node_list = $this->get("/nodes/".$node."/tasks/");
-		if (count($node_list) > 0) {
-			$nodes_array = array();
-			foreach ($node_list as $node) {
-				$nodes_array[] = $node['tasks'];
-			}
-			return $nodes_array;
+			return $nodes_list;
 		} else {
 			error_log(" Empty list of nodes returned in this cluster.");
 			return false;
