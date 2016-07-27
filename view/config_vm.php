@@ -39,7 +39,7 @@
             <div class="form-group has-feedback">
               <label for="description" class="blu customfont">Description</label>
               <input type="text" name="description" class="form-control" id="description" value="VM de dev 1001pneus">
-              <span class="glyphicon glyphicon-tags form-control-feedback blu"></span>
+              <span class="input-group-addon"><i class="glyphicon glyphicon-tags form-control-feedback blu"></i></span>
             </div>
 <!-- Mot de passe -->
             <div class="form-group has-feedback">
