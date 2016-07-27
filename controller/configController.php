@@ -33,6 +33,8 @@ if ($pve2->login()) {
       header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
       die();
     }
+    echo 'lol';
+    die ();
     $_SESSION['ok-exist'] = 0;
     $new_container_settings = array();
     $new_container_settings['ostemplate'] = "local:vztmpl/" . $template;
