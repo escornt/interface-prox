@@ -17,6 +17,6 @@ function(){
     $('txt1').hide();
 });
 
-$('#txt1').load(function(){
+$('#txt1').ready(function(){
   $('#txt1').hide();
 });
