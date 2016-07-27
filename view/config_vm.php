@@ -9,6 +9,7 @@
       <link rel="stylesheet" href="/css/style.css" />
       <link rel="shortcut icon" href="/css/favicon.ico" />
       <link href="https://fonts.googleapis.com/css?family=Changa" rel="stylesheet" />
+      <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
@@ -23,6 +24,8 @@
           <form class="form-vertical" role="form" method="POST" action="/controller/configController.php">
 <!-- ID VM -->
             <div class="form-group has-feedback">
+              <i class="fa fa-caret-down" id="i1"></i>
+              <div id="txt1" type="hidden">test</div>
               <label for="ID VM" class="blu customfont">ID VM</label>
               <input type="number" name="ID" class="form-control" id="ID VM" value="<?php echo $_SESSION['lastID'] ?>">
               <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
@@ -107,5 +110,6 @@
           </form>
       </div><!-- /.col-xs-4 col-md-offset-4  -->
     </div><!-- /.row -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
  </body>
 </html>

@@ -43,8 +43,6 @@ if ($pve2->login()) {
     var_dump($task);
     $current_status = ($pve2->get_vm_task_status($first_node, $task));
     var_dump($current_status);
-    $current_log = ($pve2->get_vm_task_log($first_node, $task));
-    var_dump($current_log);
 } else {
     $_SESSION['ok-log'] = 1;
     header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
