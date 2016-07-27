@@ -10,11 +10,11 @@
 
 });*/
 
-$("#i1").mousenter(function(){
+$("#i1").mouseenter(function(){
     $('txt1').show();
 });
 
-$("#i1").mousleave(function(){
+$("#i1").mouseleave(function(){
     $('txt1').hide();
 });
 
