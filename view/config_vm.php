@@ -20,7 +20,7 @@
         </div>
     </div><!-- /.row -->
     <div class="row">
-      <div class="col-xs-4 col-md-offset-4">
+      <div class="col-xs-5 col-md-offset-4.5">
           <form class="form-vertical" role="form" method="POST" action="/controller/configController.php">
 <!-- ID VM -->
             <div class="form-group has-feedback">
