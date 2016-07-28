@@ -6,7 +6,7 @@ input {
 .m1 {margin-bottom: 5rem; margin-top: 5rem; margin-left: 8rem;}
 .m2 {margin: 2rem;}
 .m3 {margin-left: 1rem}
-.def-hidden {display: none !important;}
+.def-hidden {display: none}
 @font-face {
   font-family: 'Changa', sans-serif;
 }
@@ -25,6 +25,6 @@ input {
 
 label {display: table-cell;}
 
-#txt1, #txt2, #txt3, #txt4, #txt5, #txt6, #txt7, #txt8, #txt9
+.txt
 {display: table-cell;
 font-style: italic;}

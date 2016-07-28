@@ -1,3 +1,3 @@
 $('#sub').click(function(){
-  $('#sub-ok').show();
+  $('#sub-ok').removeClass('def-hidden');
 });
