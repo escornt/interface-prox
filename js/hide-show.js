@@ -1,11 +1,10 @@
 // ID VM
 $('#i1').click(function(){
-    if ($('#txt1').hasClass("def-hidden")) {
-        $('#txt1').removeClass('def-hidden');
-        $('#txt1').addClass('txt');
-      }
-    else
-    {
+    if ($('#txt1').hasClass('def-hidden')) {
+      $('#txt1').removeAttr('def-hidden');
+      $('#txt1').addClass('txt');
+    }
+    else {
       $('#txt1').removeClass('txt');}
       $('#txt1').addClass('def-hidden');
     }
