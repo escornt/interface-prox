@@ -13,8 +13,7 @@ $('#i2').click(function(){
         $('#txt2').hide();}
     else{$('#txt2').show();}
 });
-  $('#txt2').hide('fast');
-});
+
 // Description
 $('#i3').click(function(){
     if ($('#txt3').is(":visible")){
