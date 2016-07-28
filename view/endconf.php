@@ -12,5 +12,9 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
-coucou
+    <div class="row">
+        <div class="col-xs-6 col-md-offset-2">
+          <div class="m1 customfont blu fs2">La VM à été créée avec succès</div>
+        </div>
+    </div><!-- /.row -->
   </body>
