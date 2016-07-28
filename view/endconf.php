@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -13,8 +14,8 @@
   </head>
   <body>
     <div class="row">
-        <div class="col-xs-6 col-md-offset-2">
-          <div class="m1 customfont blu fs2">La VM à été créée avec succès</div>
+        <div class="col-xs-4 col-md-offset-4">
+          <div class="m1 customfont blu fs2">La VM <?php echo $_SESSION['ID']?> à été créée avec succès</div>
         </div>
     </div><!-- /.row -->
   </body>

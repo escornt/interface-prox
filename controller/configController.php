@@ -54,6 +54,7 @@ if ($pve2->login()) {
   if ($current_status['exitstatus'] == 'OK') {
     $_SESSION['ok-creat'] = 0;
     $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/start");
+    $_POST['ID'] = $_SESSION['ID'];
     header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
     die();
   } else {
