@@ -1,6 +1,6 @@
 $('#sub').click(function(){
   $('#sub-ok').show();}
 });
-$('#sub').pageLoad(function(){
-  $('#sub-ok').hide();
+$(document).ready(function(){
+  $('#sub-ok').hide("fast");
 });

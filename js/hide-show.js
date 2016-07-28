@@ -5,7 +5,7 @@ $('#i1').click(function(){
     else{$('#txt1').show();}
 });
 $('#txt1').ready(function(){
-  $('#txt1').hide();
+  $('#txt1').hide('fast');
 });
 // Nom VM
 $('#i2').click(function(){
@@ -14,7 +14,7 @@ $('#i2').click(function(){
     else{$('#txt2').show();}
 });
 $('#txt2').ready(function(){
-  $('#txt2').hide();
+  $('#txt2').hide('fast');
 });
 // Description
 $('#i3').click(function(){
@@ -23,7 +23,7 @@ $('#i3').click(function(){
     else{$('#txt3').show();}
 });
 $('#txt3').ready(function(){
-  $('#txt3').hide();
+  $('#txt3').hide('fast');
 });
 //Mot de passe
 $('#i4').click(function(){
@@ -32,7 +32,7 @@ $('#i4').click(function(){
     else{$('#txt4').show();}
 });
 $('#txt4').ready(function(){
-  $('#txt4').hide();
+  $('#txt4').hide('fast');
 });
 // Confirmation mot de passe
 $('#i5').click(function(){
@@ -41,7 +41,7 @@ $('#i5').click(function(){
     else{$('#txt5').show();}
 });
 $('#txt5').ready(function(){
-  $('#txt5').hide();
+  $('#txt5').hide('fast');
 });
 // Espace Disque
 $('#i6').click(function(){
@@ -50,7 +50,7 @@ $('#i6').click(function(){
     else{$('#txt6').show();}
 });
 $('#txt6').ready(function(){
-  $('#txt6').hide();
+  $('#txt6').hide('fast');
 });
 // CPUs
 $('#i7').click(function(){
@@ -59,7 +59,7 @@ $('#i7').click(function(){
     else{$('#txt7').show();}
 });
 $('#txt7').ready(function(){
-  $('#txt7').hide();
+  $('#txt7').hide('fast');
 });
 // RAM
 $('#i8').click(function(){
@@ -68,7 +68,7 @@ $('#i8').click(function(){
     else{$('#txt8').show();}
 });
 $('#txt8').ready(function(){
-  $('#txt8').hide();
+  $('#txt8').hide('fast');
 });
 // Swap
 $('#i9').click(function(){
@@ -77,5 +77,5 @@ $('#i9').click(function(){
     else{$('#txt9').show();}
 });
 $('#txt9').ready(function(){
-  $('#txt9').hide();
+  $('#txt9').hide('fast');
 });
