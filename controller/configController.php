@@ -33,7 +33,7 @@ if ($pve2->login()) {
       header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
       die();
     }
-    $_SESSION['ok-exist'] = 0;
+    /*$_SESSION['ok-exist'] = 0;
     $new_container_settings = array();
     $new_container_settings['ostemplate'] = "local:vztmpl/" . $template;
     $new_container_settings['vmid'] = $_POST['ID'];
@@ -51,17 +51,17 @@ if ($pve2->login()) {
       sleep(20);
       $current_status = ($pve2->get_vm_task_status($first_node, $task));
   }
-  if ($current_status['exitstatus'] == 'OK') {
+  if ($current_status['exitstatus'] == 'OK') {*/
     $_SESSION['ok-creat'] = 0;
     $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/start");
-    $_POST['ID'] = $_SESSION['ID'];
+    $_SESSION['ID'] = $_POST['ID'];
     header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
     die();
-  } else {
+  /*} else {
     $_SESSION['ok-creat'] = 1;
     header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
     die();
-  }
+  }*/
 } else {
     $_SESSION['ok-log'] = 1;
     header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
