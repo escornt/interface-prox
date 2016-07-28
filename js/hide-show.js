@@ -1,10 +1,13 @@
 // ID VM
 $('#i1').click(function(){
-    if ($('#txt1').hasClass('def-hidden')) {
-      $('#txt1').attr("def-hidden", "txt");
-    }
-    else {
-      $('#txt1').attr("txt", "def-hidden");
+    if ($('#txt1').is(":visible")) {
+        $('#txt1').addClass('def-hidden');
+        $('#txt1').removeClass('txt');
+      }
+    else
+    {
+      $('#txt1').addClass('txt');
+      $('#txt1').removeClass('def-hidden');
     }
 });
 /*$('#txt1').ready(function(){
