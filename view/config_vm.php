@@ -60,28 +60,28 @@
 <!-- Espace Disque -->
             <div class="form-group has-feedback">
               <label for="Espace disque" class="blu customfont" id="i6">Espace Disque (GB) <i class="fa fa-info-circle"></i></label>
-              <div id="txt6" class="def-hidden"> <small>&nbsp Minimum recommandé -> 15 GB.</small></div>
+              <div id="txt6" class="def-hidden"> <small>&nbsp Recommandé -> 15 GB.</small></div>
               <input type="number" min="1" max="1000" name="disk_size" class="form-control" id="disk_size" value="15">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
 <!-- CPUs -->
             <div class="form-group has-feedback">
               <label for="CPU" class="blu customfont" id="i7">CPUs <i class="fa fa-info-circle"></i></label>
-              <div id="txt7" class="def-hidden"> <small>&nbsp Minimum recommandé -> 1.</small></div>
+              <div id="txt7" class="def-hidden"> <small>&nbsp Recommandé -> 1.</small></div>
               <input type="number" min="1" name="CPU" class="form-control" id="CPU" value="1">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
 <!-- RAM -->
             <div class="form-group has-feedback">
               <label for="RAM" class="blu customfont" id="i8">RAM (MB) <i class="fa fa-info-circle"></i></label>
-              <div id="txt8" class="def-hidden"> <small>&nbsp Minimum recommandé -> 4000 MB.</small></div>
+              <div id="txt8" class="def-hidden"> <small>&nbsp Recommandé -> 4000 MB.</small></div>
               <input type="number" min="512" max="16000" name="RAM" class="form-control" id="RAM" value="4000">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
 <!-- Swap -->
             <div class="form-group has-feedback">
               <label for="swap" class="blu customfont" id="i9">Swap (MB) <i class="fa fa-info-circle"></i></label>
-              <div id="txt9" class="def-hidden"> <small>&nbsp Minimum recommandé -> 4000 MB.</small></div>
+              <div id="txt9" class="def-hidden"> <small>&nbsp Recommandé -> 4000 MB.</small></div>
               <input type="number" min="512" max="16000" name="swap" class="form-control" id="swap" value="4000">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
@@ -118,7 +118,7 @@
             </div>
   	        <button type="submit" class="btn btn-info customfont" id="sub">Créer</button>
           </form>
-      </div><!-- /.col-xs-4 col-md-offset-4  -->
+      </div><!-- /.col-xs-4 col-md-offset-4 -->
     </div><!-- /.row -->
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <script src="/js/hide-show.js"></script>

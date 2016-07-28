@@ -61,9 +61,9 @@ if ($pve2->login()) {
     // Demarage de la VM
     $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/start");
     $_SESSION['ID'] = $_POST['ID'];
-    $connect = ssh2_connect($hostname, 22);
+    /*$connect = ssh2_connect($hostname, 22);
     ssh2_auth_password($connect, 'root', 'bbrother');
-    $stream = ssh2_exec($connect, 'mkdir testerino');
+    $stream = ssh2_exec($connect, 'mkdir testerino');*/
     header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
     die();
   } else {
