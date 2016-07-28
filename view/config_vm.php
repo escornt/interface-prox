@@ -113,7 +113,7 @@
             <?php if ($_SESSION['ok-creat'] == 1): ?>
               <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur,</strong><br/>La création de la VM à échouée.</div>
             <?php endif; ?>
-            <div class="alert alert-success m2 def-hidden id="sub-ok"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <div class="alert alert-success m2 def-hidden"id="sub-ok"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
               <strong>Création de la VM</strong><br/>La création de la machine peut prendre quelques minutes.      <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
             </div>
   	        <button type="submit" class="btn btn-info customfont" id="sub">Créer</button>
