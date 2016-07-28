@@ -25,63 +25,63 @@
 <!-- ID VM -->
             <div class="form-group has-feedback">
               <label for="ID VM" class="blu customfont" id="i1">ID VM <i class="fa fa-info-circle"></i></label>
-              <div id="txt1"> <small>&nbsp Par défaut la dernière VM disponnible est sélectionnée.</small></div>
+              <div id="txt1" class="def-hidden"> <small>&nbsp Par défaut la dernière VM disponnible est sélectionnée.</small></div>
               <input type="number" name="ID" class="form-control" id="ID VM" value="<?php echo $_SESSION['lastID'] ?>">
               <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
             </div>
 <!-- Nom VM -->
             <div class="form-group has-feedback">
               <label for="nom_vm" class="blu customfont" id="i2">Nom VM <i class="fa fa-info-circle"></i></label>
-              <div id="txt2"> <small>&nbsp Par défaut le nom sera VM{VM_ID}.</small></div>
+              <div id="txt2" class="def-hidden"> <small>&nbsp Par défaut le nom sera VM{VM_ID}.</small></div>
               <input type="text" name="nom_vm" class="form-control" id="nom_vm" value="<?php echo "VM".$_SESSION['lastID'] ?>">
               <span class="glyphicon glyphicon-tag form-control-feedback blu"></span>
             </div>
 <!-- Description -->
             <div class="form-group has-feedback">
               <label for="description" class="blu customfont" id="i3">Description <i class="fa fa-info-circle"></i></label>
-              <div id="txt3"> <small>&nbsp Conseil : entrez le propiétaire et l'utilité de la VM (ex : "user dev-mobile")</small></div>
+              <div id="txt3" class="def-hidden"> <small>&nbsp Conseil : entrez le propiétaire et l'utilité de la VM (ex : "user dev-mobile")</small></div>
               <input type="text" name="description" class="form-control" id="description" value="VM de dev 1001pneus">
               <span class="glyphicon glyphicon-tags form-control-feedback blu"></span>
             </div>
 <!-- Mot de passe -->
             <div class="form-group has-feedback">
               <label for="password" class="blu customfont" id="i4">Mot de passe <i class="fa fa-info-circle"></i></label>
-              <div id="txt4"> <small>&nbsp Mot de passe de la VM, Minimum 5 caractères.</small></div>
+              <div id="txt4" class="def-hidden"> <small>&nbsp Mot de passe de la VM, Minimum 5 caractères.</small></div>
               <input type="password" name="password" class="form-control" id="password">
               <span class="glyphicon glyphicon-lock form-control-feedback blu"></span>
             </div>
 <!-- Confimation mot de passe -->
             <div class="form-group has-feedback">
               <label for="password" class="blu customfont" id="i5">Confirmer mot de passe <i class="fa fa-info-circle"></i></label>
-              <div id="txt5"> <small>&nbsp Entrez le mot de passe une nouvelle fois pour le confirmer.</small></div>
+              <div id="txt5" class="def-hidden"> <small>&nbsp Entrez le mot de passe une nouvelle fois pour le confirmer.</small></div>
               <input type="password" name="conf-password" class="form-control" id="conf-password">
               <span class="glyphicon glyphicon-lock form-control-feedback blu"></span>
             </div>
 <!-- Espace Disque -->
             <div class="form-group has-feedback">
               <label for="Espace disque" class="blu customfont" id="i6">Espace Disque (GB) <i class="fa fa-info-circle"></i></label>
-              <div id="txt6"> <small>&nbsp Minimum recommandé -> 15 GB.</small></div>
+              <div id="txt6" class="def-hidden"> <small>&nbsp Minimum recommandé -> 15 GB.</small></div>
               <input type="number" min="1" max="1000" name="disk_size" class="form-control" id="disk_size" value="15">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
 <!-- CPUs -->
             <div class="form-group has-feedback">
               <label for="CPU" class="blu customfont" id="i7">CPUs <i class="fa fa-info-circle"></i></label>
-              <div id="txt7"> <small>&nbsp Minimum recommandé -> 1.</small></div>
+              <div id="txt7" class="def-hidden"> <small>&nbsp Minimum recommandé -> 1.</small></div>
               <input type="number" min="1" name="CPU" class="form-control" id="CPU" value="1">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
 <!-- RAM -->
             <div class="form-group has-feedback">
               <label for="RAM" class="blu customfont" id="i8">RAM (MB) <i class="fa fa-info-circle"></i></label>
-              <div id="txt8"> <small>&nbsp Minimum recommandé -> 4000 MB.</small></div>
+              <div id="txt8" class="def-hidden"> <small>&nbsp Minimum recommandé -> 4000 MB.</small></div>
               <input type="number" min="512" max="16000" name="RAM" class="form-control" id="RAM" value="4000">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
 <!-- Swap -->
             <div class="form-group has-feedback">
               <label for="swap" class="blu customfont" id="i9">Swap (MB) <i class="fa fa-info-circle"></i></label>
-              <div id="txt9"> <small>&nbsp Minimum recommandé -> 4000 MB.</small></div>
+              <div id="txt9" class="def-hidden"> <small>&nbsp Minimum recommandé -> 4000 MB.</small></div>
               <input type="number" min="512" max="16000" name="swap" class="form-control" id="swap" value="4000">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
@@ -113,7 +113,7 @@
             <?php if ($_SESSION['ok-creat'] == 1): ?>
               <div class="alert alert-danger m2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Erreur,</strong><br/>La création de la VM à échouée.</div>
             <?php endif; ?>
-            <div class="alert alert-success m2" id="sub-ok"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <div class="alert alert-success m2 def-hidden id="sub-ok"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
               <strong>Création de la VM</strong><br/>La création de la machine peut prendre quelques minutes.      <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
             </div>
   	        <button type="submit" class="btn btn-info customfont" id="sub">Créer</button>
