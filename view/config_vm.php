@@ -16,7 +16,7 @@
   <body>
     <div class="row">
         <div class="col-xs-4 col-md-offset-4">
-          <div class="m1 customfont blu fs2">Interface Proxmox - Création de VM</div>
+          <div class="m1 customfont blu fs2">Interface Proxmox<br/>Création de VM</div>
         </div>
     </div><!-- /.row -->
     <div class="row">
