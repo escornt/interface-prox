@@ -44,7 +44,7 @@ if ($pve2->login()) {
     $new_container_settings['memory'] = $_POST['RAM'];
     $new_container_settings['swap'] = $_POST['swap'];
     $new_container_settings['password'] = $_POST['password'];
-    $new_container_settings['strorage'] = "NFS";
+    $new_container_settings['strorage'] = "nfs";
     $task = $pve2->post("/nodes/".$first_node."/openvz", $new_container_settings);
     $current_status = ($pve2->get_vm_task_status($first_node, $task));
     while ($current_status['status'] == 'running') {
