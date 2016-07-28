@@ -18,7 +18,7 @@ $('#i2').click(function(){
       }
     else
     {
-      $('#txt2').addClass('txt');}
+      $('#txt2').addClass('txt');
       $('#txt2').removeClass('def-hidden');
     }
 });
@@ -31,7 +31,7 @@ $('#i3').click(function(){
       }
     else
     {
-      $('#txt3').addClass('txt');}
+      $('#txt3').addClass('txt');
       $('#txt3').removeClass('def-hidden');
     }
 });
@@ -44,7 +44,7 @@ $('#i4').click(function(){
       }
     else
     {
-      $('#txt4').addClass('txt');}
+      $('#txt4').addClass('txt');
       $('#txt4').removeClass('def-hidden');
     }
 });
@@ -57,7 +57,7 @@ $('#i5').click(function(){
       }
     else
     {
-      $('#txt5').addClass('txt');}
+      $('#txt5').addClass('txt');
       $('#txt5').removeClass('def-hidden');
     }
 });
@@ -70,7 +70,7 @@ $('#i6').click(function(){
       }
     else
     {
-      $('#txt6').addClass('txt');}
+      $('#txt6').addClass('txt');
       $('#txt6').removeClass('def-hidden');
     }
 });
@@ -83,7 +83,7 @@ $('#i7').click(function(){
       }
     else
     {
-      $('#txt7').addClass('txt');}
+      $('#txt7').addClass('txt');
       $('#txt7').removeClass('def-hidden');
     }
 });
@@ -96,7 +96,7 @@ $('#i8').click(function(){
       }
     else
     {
-      $('#txt8').addClass('txt');}
+      $('#txt8').addClass('txt');
       $('#txt8').removeClass('def-hidden');
     }
 });
@@ -109,7 +109,7 @@ $('#i9').click(function(){
       }
     else
     {
-      $('#txt9').addClass('txt');}
+      $('#txt9').addClass('txt');
       $('#txt9').removeClass('def-hidden');
     }
 });
