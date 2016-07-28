@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once(__DIR__ . "/../pve2_api.class.php");
-$template = "ct_template-1.4.tar.gz";
+$template = "ct_template-1.5.tar.gz";
 $hostname = "10.100.1.19";
 $user = "VM_DEPLOY";
 $realm = "pve";
@@ -44,7 +44,7 @@ if ($pve2->login()) {
     $new_container_settings['memory'] = $_POST['RAM'];
     $new_container_settings['swap'] = $_POST['swap'];
     $new_container_settings['password'] = $_POST['password'];
-    $new_container_settings['strorage'] = 'NFS';
+    $new_container_settings['strorage'] = "NFS";
     $task = $pve2->post("/nodes/".$first_node."/openvz", $new_container_settings);
     $current_status = ($pve2->get_vm_task_status($first_node, $task));
     while ($current_status['status'] == 'running') {
