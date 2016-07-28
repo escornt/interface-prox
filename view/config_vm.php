@@ -16,7 +16,7 @@
   <body>
     <div class="row">
         <div class="col-xs-4 col-md-offset-4">
-          <div class="m1 customfont blu fs2">Interface Proxmox</div>
+          <div class="m1 customfont blu fs2">Interface Proxmox - Création de VM</div>
         </div>
     </div><!-- /.row -->
     <div class="row">
@@ -39,7 +39,7 @@
 <!-- Description -->
             <div class="form-group has-feedback">
               <label for="description" class="blu customfont" id="i3">Description <i class="fa fa-info-circle"></i></label>
-              <div id="txt3"> <small>&nbsp Conseil : entrez le propiétaire et l'utilité de la VM (ex : "user dev-cdmobile")</small></div>
+              <div id="txt3"> <small>&nbsp Conseil : entrez le propiétaire et l'utilité de la VM (ex : "user dev-mobile")</small></div>
               <input type="text" name="description" class="form-control" id="description" value="VM de dev 1001pneus">
               <span class="glyphicon glyphicon-tags form-control-feedback blu"></span>
             </div>
