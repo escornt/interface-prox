@@ -53,7 +53,7 @@ if ($pve2->login()) {
     $current_status = ($pve2->get_vm_task_status($first_node, $task));
     // Attend la fin de la phase de creation pout continuer et check si fail
     while ($current_status['status'] == 'running') {
-      sleep(20);
+      sleep(10);
       $current_status = ($pve2->get_vm_task_status($first_node, $task));
   }
   if ($current_status['exitstatus'] == 'OK') {
@@ -65,6 +65,12 @@ if ($pve2->login()) {
     ssh2_auth_password($connect, 'root', 'bbrother');
     $stream = ssh2_exec($connect, 'sh nfs.sh '.$_POST['ID']);
     $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/stop");
+    $current_status = ($pve2->get_vm_task_status($first_node, $task));
+    while ($current_status['status'] == 'running') {
+      sleep(10);
+      $current_status = ($pve2->get_vm_task_status($first_node, $task));
+    }
+    $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/start");
     header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
     die();
   } else {
