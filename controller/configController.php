@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once(__DIR__ . "/../pve2_api.class.php");
-$template = "ct_template-1.5.tar.gz";
+$template = "ct_template-1.6.tar.gz";
 $hostname = "10.100.1.19";
 $user = "VM_DEPLOY";
 $realm = "pve";
@@ -88,9 +88,9 @@ if ($pve2->login()) {
       sleep(10);
       $current_status = ($pve2->get_vm_task_status($first_node, $task));
     }
-
     // Lancement du script de config dans la vm
-    $stream = ssh2_exec($connect, 'sh /mnt/pve/openvz/preivate/'.$_POST['ID'].'/go.sh '.$_POST['ID']);
+
+    $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].'sh /go.sh '.$_POST['ID']);
 
     header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
     die();
