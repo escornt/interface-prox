@@ -31,7 +31,7 @@ if ($pve2->login()) {
     unset($nodes);
     // test si la VM existe deja
     $test = $pve2->get_vm_status($first_node, $_POST['ID']);
-    /*if ($test) {
+    if ($test) {
       $_SESSION['ok-exist'] = 1;
       header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
       die();
@@ -59,7 +59,7 @@ if ($pve2->login()) {
   if ($current_status['exitstatus'] == 'OK') {
     $_SESSION['ok-creat'] = 0;
     // Demarage de la VM
-    $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/start");*/
+    $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/start");
     $_SESSION['ID'] = $_POST['ID'];
     $connect = ssh2_connect($hostname, 22);
     ssh2_auth_password($connect, 'root', 'bbrother');
