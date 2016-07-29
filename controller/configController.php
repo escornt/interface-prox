@@ -30,7 +30,7 @@ if ($pve2->login()) {
     $first_node = $nodes[0];
     unset($nodes);
     // test si la VM existe deja
-    $test = $pve2->get_vm_status($first_node, $_POST['ID']);
+    /*$test = $pve2->get_vm_status($first_node, $_POST['ID']);
     if ($test) {
       $_SESSION['ok-exist'] = 1;
       header('Location: http://interface-prox.www.1001pneus.fr/view/config_vm.php');
@@ -38,7 +38,7 @@ if ($pve2->login()) {
     }
     $_SESSION['ok-exist'] = 0;
     // Creation de la VM
-    /*$new_container_settings = array();
+    $new_container_settings = array();
     $new_container_settings['ostemplate'] = "local:vztmpl/" . $template;
     $new_container_settings['vmid'] = $_POST['ID'];
     $new_container_settings['cpus'] = $_POST['CPU'];
