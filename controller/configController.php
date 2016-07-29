@@ -49,6 +49,7 @@ if ($pve2->login()) {
     $new_container_settings['swap'] = $_POST['swap'];
     $new_container_settings['password'] = $_POST['password'];
     $new_container_settings['storage'] = "NFS";
+
     $task = $pve2->post("/nodes/".$first_node."/openvz", $new_container_settings);
     $current_status = ($pve2->get_vm_task_status($first_node, $task));
 
@@ -90,7 +91,7 @@ if ($pve2->login()) {
     }
     // Lancement du script de config dans la vm
 
-    $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].'sh /go.sh '.$_POST['ID']);
+    $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' sh /go.sh '.$_POST['ID']);
 
     header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
     die();
