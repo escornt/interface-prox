@@ -38,7 +38,7 @@ if ($pve2->login()) {
     }
     $_SESSION['ok-exist'] = 0;
     // Creation de la VM
-    $new_container_settings = array();
+    /*$new_container_settings = array();
     $new_container_settings['ostemplate'] = "local:vztmpl/" . $template;
     $new_container_settings['vmid'] = $_POST['ID'];
     $new_container_settings['cpus'] = $_POST['CPU'];
@@ -59,7 +59,7 @@ if ($pve2->login()) {
   if ($current_status['exitstatus'] == 'OK') {
     $_SESSION['ok-creat'] = 0;
     // Demarage de la VM
-    $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/start");
+    $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/start");*/
     $_SESSION['ID'] = $_POST['ID'];
     $connect = ssh2_connect($hostname, 22);
     ssh2_auth_password($connect, 'root', 'bbrother');
