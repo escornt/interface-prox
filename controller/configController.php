@@ -77,13 +77,7 @@ if ($pve2->login()) {
     $stream = ssh2_exec($connect, 'sh nfs.sh '.$_POST['ID']);
 
     // reboot vm pour valider le NFS
-    $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/stop");
-    $current_status = ($pve2->get_vm_task_status($first_node, $task));
-    while ($current_status['status'] == 'running') {
-      sleep(10);
-      $current_status = ($pve2->get_vm_task_status($first_node, $task));
-    }
-    $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/start");
+    $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/resume");
     $current_status = ($pve2->get_vm_task_status($first_node, $task));
     while ($current_status['status'] == 'running') {
       sleep(10);
