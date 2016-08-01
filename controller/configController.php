@@ -49,7 +49,7 @@ if ($pve2->login()) {
     $new_container_settings['swap'] = $_POST['swap'];
     $new_container_settings['password'] = $_POST['password'];
     $new_container_settings['storage'] = "NFS";
-    $new_container_settings['hostname'] = 'vm'.$_POST['ID'];.'.bordeaux.1001pneus.net';
+    $new_container_settings['hostname'] = 'vm'.$_POST['ID'].'.bordeaux.1001pneus.net';
 
     $task = $pve2->post("/nodes/".$first_node."/openvz", $new_container_settings);
     $current_status = ($pve2->get_vm_task_status($first_node, $task));
