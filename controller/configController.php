@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once(__DIR__ . "/../pve2_api.class.php");
-$template = "ct_template-1.8.tar.gz";
+$template = "ct_template-1.9.tar.gz";
 $hostname = "10.100.1.19";
 $user = "VM_DEPLOY";
 $realm = "pve";
