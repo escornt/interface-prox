@@ -76,7 +76,7 @@ if ($pve2->login()) {
     $connect = ssh2_connect($hostname, 22);
     ssh2_auth_password($connect, 'root', 'bbrother');
     $stream = ssh2_exec($connect, 'sh nfs.sh '.$_POST['ID']);
-
+    $stream = ssh2_exec($connect, 'vzctl set '.$_POST['ID'].' --netif_add eth0,,,,vmbr0 --save');
     // reboot vm pour valider le NFS
     $task = $pve2->post("/nodes/".$first_node."/openvz/".$_POST['ID']."/status/resume");
     $current_status = ($pve2->get_vm_task_status($first_node, $task));
