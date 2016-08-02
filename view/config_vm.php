@@ -86,8 +86,8 @@
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
 
-            <div class="form-group">
-              <input type="radio" name="template" value="default" checked> <div class="blu customfont">Template par défaut. </div>
+            <div class="form-group has-feedback    ">
+              <div class="blu customfont"><input type="radio" name="template" value="default" checked>Template par défaut. </div>
               <input type="radio" name="template" value="mobile"> <div class="blu customfont">Template pour dev mobile. </div>
             </div>
 
