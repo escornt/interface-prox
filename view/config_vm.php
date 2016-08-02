@@ -86,6 +86,11 @@
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
 
+            <div class="form-group has-feedback">
+              <input type="radio" name="template" value="default" class="blu customfont"> Template par défaut.
+              <input type="radio" name="template" value="mobile" class="blu customfont"> Template pour dev mobile.
+            </div>
+
   <!--          <div class="form-group has-feedback">
               <label class="customfont blu"><input type="checkbox" id="cbox1" name="mount" checked> Monter le filer à la racine de la VM</label>
             </div>
