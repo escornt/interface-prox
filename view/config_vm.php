@@ -60,8 +60,8 @@
 <!-- Espace Disque -->
             <div class="form-group has-feedback">
               <label for="Espace disque" class="blu customfont" id="i6">Espace Disque (GB) <i class="fa fa-info-circle"></i></label>
-              <div id="txt6" class="def-hidden"> <small>&nbsp Recommandé -> 20 GB.</small></div>
-              <input type="number" min="1" max="1000" name="disk_size" class="form-control" id="disk_size" value="20">
+              <div id="txt6" class="def-hidden"> <small>&nbsp Recommandé -> 30 GB.</small></div>
+              <input type="number" min="1" max="1000" name="disk_size" class="form-control" id="disk_size" value="30">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
 <!-- CPUs -->

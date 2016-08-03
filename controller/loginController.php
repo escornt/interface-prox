@@ -3,9 +3,9 @@ session_start();
 
 require_once(__DIR__ . "/../pve2_api.class.php");
 
+
 //variables login proxmox
 
-$template = "ct_template-1.4.tar.gz";
 $hostname = "10.100.1.19";
 $user = "VM_DEPLOY";
 $realm = "pve";
