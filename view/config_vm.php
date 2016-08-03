@@ -30,6 +30,7 @@
               <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
             </div>
             <button type="button" class="btn btn-info customfont" id="button-avance">Options avancées</button>
+            <br/>
           <div id="avance" class="def-hidden">
 <!-- Nom VM -->
             <div class="form-group has-feedback">
