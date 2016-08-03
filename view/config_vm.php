@@ -29,6 +29,8 @@
               <input type="number" name="ID" class="form-control" id="ID VM" value="<?php echo $_SESSION['lastID'] ?>">
               <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
             </div>
+            <button type="button" class="btn btn-info customfont" id="button-avance">Options avancées</button>
+          <div id="avance" class="def-hidden">
 <!-- Nom VM -->
             <div class="form-group has-feedback">
               <label for="nom_vm" class="blu customfont" id="i2">Nom CT <i class="fa fa-info-circle"></i></label>
@@ -85,7 +87,7 @@
               <input type="number" min="512" max="16000" name="swap" class="form-control" id="swap" value="1000">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
-
+          </div> <!-- avance -->
             <div class="form-group has-feedback    ">
               <div class="blu customfont"><input type="radio" name="template" value="par defaut" checked> Template par défaut. </div>
               <div class="blu customfont"><input type="radio" name="template" value="mobile"> Template pour dev mobile. </div>
