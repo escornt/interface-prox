@@ -4,7 +4,7 @@ $('#sub').click(function(){
 });
 
 $('#button-avance').click(function(){
-  if ($('#avance').hasClass('def-hidden')) {}
+  if ($('#avance').hasClass('def-hidden')) {
   $('#avance').removeClass('def-hidden');
 } else {
   $('#avance').addClass('def-hidden');
