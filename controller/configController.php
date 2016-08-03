@@ -5,7 +5,7 @@ $_SESSION['ip'] = "10.100.4.".$_POST['ID'];
 $_SESSION['nom_vm'] = $_POST['nom_vm'];
 
 require_once(__DIR__ . "/../pve2_api.class.php");
-if ($_POST['template'] == 'default') {
+if ($_POST['template'] == 'par defaut') {
   $template = "ct_template-1.9.tar.gz";
 } else {
   $template = "ct_template-mobile-1.0.tar.gz";
@@ -58,7 +58,6 @@ if ($pve2->login()) {
     $new_container_settings['swap'] = $_POST['swap'];
     $new_container_settings['password'] = $_POST['password'];
     $new_container_settings['storage'] = "NFS";
-    $new_container_settings['hostname'] = 'vm'.$_POST['ID'].'.bordeaux.1001pneus.net';
 
     $task = $pve2->post("/nodes/".$first_node."/openvz", $new_container_settings);
     $current_status = ($pve2->get_vm_task_status($first_node, $task));

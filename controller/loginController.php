@@ -17,7 +17,8 @@ $server = "10.100.1.18:389";
 $droit_acces = 'admin_it';
 $Infos = array();
 $InfosDroits = array();
-$_SESSION['user'] = $_POST['user'];
+list($tmp, $tmp2) = explode($_POST['user']);
+$_SESSION['user'] = $tmp;
 //connection ldap
 $result = Connect($_POST["user"], $_POST["pswd"], $Infos, $InfosDroits, $server);
 if ($result == false) {

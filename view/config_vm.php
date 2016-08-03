@@ -87,7 +87,7 @@
             </div>
 
             <div class="form-group has-feedback    ">
-              <div class="blu customfont"><input type="radio" name="template" value="default" checked> Template par défaut. </div>
+              <div class="blu customfont"><input type="radio" name="template" value="par defaut" checked> Template par défaut. </div>
               <div class="blu customfont"><input type="radio" name="template" value="mobile"> Template pour dev mobile. </div>
             </div>
 
