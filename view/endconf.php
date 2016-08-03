@@ -15,8 +15,7 @@
   <body>
     <div class="row">
         <div class="col-xs-5 col-md-offset-3">
-          <div class="m1 customfont blu fs2">La VM <?php echo $_SESSION['ID']; ?> à été créée avec succès</div>
-
+          <div class="m1 customfont blu fs2">La VM <?php echo $_SESSION['ID']; ?> a été créée avec succès</div>
         </div>
     </div><!-- /.row -->
   </body>
