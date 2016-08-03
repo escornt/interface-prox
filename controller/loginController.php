@@ -19,7 +19,7 @@ $Infos = array();
 $InfosDroits = array();
 
 //connection ldap
-
+$_SESSION['user'] = $_POST['user'];
 $result = Connect($_POST["user"], $_POST["pswd"], $Infos, $InfosDroits, $server);
 if ($result == false) {
   $_SESSION['substate'] = 1;

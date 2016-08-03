@@ -16,7 +16,7 @@
   <body>
     <div class="row">
         <div class="col-xs-4 col-md-offset-4">
-          <div class="m1 customfont blu fs2">Interface Proxmox<br/>&nbsp Création de VM</div>
+          <div class="m1 customfont blu fs2">Interface Proxmox<br/>&nbsp Création de CT</div>
         </div>
     </div><!-- /.row -->
     <div class="row">
@@ -24,37 +24,37 @@
           <form class="form-vertical" role="form" method="POST" action="/controller/configController.php">
 <!-- ID VM -->
             <div class="form-group has-feedback">
-              <label for="ID VM" class="blu customfont" id="i1">ID VM <i class="fa fa-info-circle"></i></label>
+              <label for="ID VM" class="blu customfont" id="i1">ID CT <i class="fa fa-info-circle"></i></label>
               <div id="txt1" class="def-hidden"> <small>&nbsp Par défaut la dernière VM disponnible est sélectionnée.</small></div>
               <input type="number" name="ID" class="form-control" id="ID VM" value="<?php echo $_SESSION['lastID'] ?>">
               <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
             </div>
 <!-- Nom VM -->
             <div class="form-group has-feedback">
-              <label for="nom_vm" class="blu customfont" id="i2">Nom VM <i class="fa fa-info-circle"></i></label>
-              <div id="txt2" class="def-hidden"> <small>&nbsp Par défaut le lnom sera VM{VM_ID}.</small></div>
-              <input type="text" name="nom_vm" class="form-control" id="nom_vm" value="<?php echo "VM".$_SESSION['lastID'] ?>">
+              <label for="nom_vm" class="blu customfont" id="i2">Nom CT <i class="fa fa-info-circle"></i></label>
+              <div id="txt2" class="def-hidden"> <small>&nbsp Par défaut le lnom sera ct-nom.</small></div>
+              <input type="text" name="nom_vm" class="form-control" id="nom_vm" value="<?php echo "ct-".$_SESSION['user'] ?>">
               <span class="glyphicon glyphicon-tag form-control-feedback blu"></span>
             </div>
 <!-- Description -->
             <div class="form-group has-feedback">
               <label for="description" class="blu customfont" id="i3">Description <i class="fa fa-info-circle"></i></label>
-              <div id="txt3" class="def-hidden"> <small>&nbsp Conseil : entrez le propiétaire et l'utilité de la VM (ex : "user dev-mobile")</small></div>
-              <input type="text" name="description" class="form-control" id="description" value="VM de dev 1001pneus">
+              <div id="txt3" class="def-hidden"> <small>&nbsp Conseil : entrez le propiétaire et l'utilité de la CT (ex : "user dev-mobile")</small></div>
+              <input type="text" name="description" class="form-control" id="description" value="<?php "CT de ".$_SESSION['user'] ?>">
               <span class="glyphicon glyphicon-tags form-control-feedback blu"></span>
             </div>
 <!-- Mot de passe -->
             <div class="form-group has-feedback">
               <label for="password" class="blu customfont" id="i4">Mot de passe <i class="fa fa-info-circle"></i></label>
-              <div id="txt4" class="def-hidden"> <small>&nbsp Mot de passe de la VM, Minimum 5 caractères.</small></div>
-              <input type="password" name="password" class="form-control" id="password">
+              <div id="txt4" class="def-hidden"> <small>&nbsp Mot de passe de la CT, Minimum 5 caractères.</small></div>
+              <input type="password" name="password" class="form-control" id="password" value="bbrother">
               <span class="glyphicon glyphicon-lock form-control-feedback blu"></span>
             </div>
 <!-- Confimation mot de passe -->
             <div class="form-group has-feedback">
               <label for="password" class="blu customfont" id="i5">Confirmer mot de passe <i class="fa fa-info-circle"></i></label>
               <div id="txt5" class="def-hidden"> <small>&nbsp Entrez le mot de passe une nouvelle fois pour le confirmer.</small></div>
-              <input type="password" name="conf-password" class="form-control" id="conf-password">
+              <input type="password" name="conf-password" class="form-control" id="conf-password" value="bbrother">
               <span class="glyphicon glyphicon-lock form-control-feedback blu"></span>
             </div>
 <!-- Espace Disque -->
