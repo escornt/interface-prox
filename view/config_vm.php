@@ -32,7 +32,7 @@
 <!-- Nom VM -->
             <div class="form-group has-feedback">
               <label for="nom_vm" class="blu customfont" id="i2">Nom VM <i class="fa fa-info-circle"></i></label>
-              <div id="txt2" class="def-hidden"> <small>&nbsp Par défaut le nom sera VM{VM_ID}.</small></div>
+              <div id="txt2" class="def-hidden"> <small>&nbsp Par défaut le lnom sera VM{VM_ID}.</small></div>
               <input type="text" name="nom_vm" class="form-control" id="nom_vm" value="<?php echo "VM".$_SESSION['lastID'] ?>">
               <span class="glyphicon glyphicon-tag form-control-feedback blu"></span>
             </div>
@@ -60,15 +60,15 @@
 <!-- Espace Disque -->
             <div class="form-group has-feedback">
               <label for="Espace disque" class="blu customfont" id="i6">Espace Disque (GB) <i class="fa fa-info-circle"></i></label>
-              <div id="txt6" class="def-hidden"> <small>&nbsp Recommandé -> 15 GB.</small></div>
-              <input type="number" min="1" max="1000" name="disk_size" class="form-control" id="disk_size" value="15">
+              <div id="txt6" class="def-hidden"> <small>&nbsp Recommandé -> 20 GB.</small></div>
+              <input type="number" min="1" max="1000" name="disk_size" class="form-control" id="disk_size" value="20">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
 <!-- CPUs -->
             <div class="form-group has-feedback">
               <label for="CPU" class="blu customfont" id="i7">CPUs <i class="fa fa-info-circle"></i></label>
-              <div id="txt7" class="def-hidden"> <small>&nbsp Recommandé -> 1.</small></div>
-              <input type="number" min="1" name="CPU" class="form-control" id="CPU" value="1">
+              <div id="txt7" class="def-hidden"> <small>&nbsp Recommandé -> 4.</small></div>
+              <input type="number" min="1" name="CPU" class="form-control" id="CPU" value="4">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
 <!-- RAM -->
@@ -81,8 +81,8 @@
 <!-- Swap -->
             <div class="form-group has-feedback">
               <label for="swap" class="blu customfont" id="i9">Swap (MB) <i class="fa fa-info-circle"></i></label>
-              <div id="txt9" class="def-hidden"> <small>&nbsp Recommandé -> 4000 MB.</small></div>
-              <input type="number" min="512" max="16000" name="swap" class="form-control" id="swap" value="4000">
+              <div id="txt9" class="def-hidden"> <small>&nbsp Recommandé -> 1000 MB.</small></div>
+              <input type="number" min="512" max="16000" name="swap" class="form-control" id="swap" value="1000">
               <span class="glyphicon glyphicon-hdd form-control-feedback blu"></span>
             </div>
 
