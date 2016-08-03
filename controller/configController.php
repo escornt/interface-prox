@@ -4,7 +4,7 @@ require_once(__DIR__ . "/../pve2_api.class.php");
 if ($_POST['template'] == 'default') {
   $template = "ct_template-1.9.tar.gz";
 } else {
-  $template = "ct_template-1.9.tar.gz";
+  $template = "ct_template-mobile-1.0.tar.gz";
 }
 $hostname = "10.100.1.19";
 $user = "VM_DEPLOY";
