@@ -17,9 +17,8 @@ $server = "10.100.1.18:389";
 $droit_acces = 'admin_it';
 $Infos = array();
 $InfosDroits = array();
-
-//connection ldap
 $_SESSION['user'] = $_POST['user'];
+//connection ldap
 $result = Connect($_POST["user"], $_POST["pswd"], $Infos, $InfosDroits, $server);
 if ($result == false) {
   $_SESSION['substate'] = 1;

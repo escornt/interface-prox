@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+$_SESSION['ip'] = "10.100.4.".$_POST['ID'];
+$_SESSION['nom_vm'] = $_POST['nom_vm'];
+
 require_once(__DIR__ . "/../pve2_api.class.php");
 if ($_POST['template'] == 'default') {
   $template = "ct_template-1.9.tar.gz";
