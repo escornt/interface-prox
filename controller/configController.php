@@ -6,6 +6,7 @@ if ($_POST['template'] == 'default') {
 } else {
   $template = "ct_template-mobile-1.0.tar.gz";
 }
+$tables = "Commandes_Suivi_Client Commandes_Suivis Affacturage_DemandeFinancement Affacturage Affacturage_Files Affacturage_Reincrement Commandes_Infos Suivi_Colis Suivi_Details Configuration_Transporteurs Fournisseur_Transporteurs station_montage_account Account Account_Addresses SuiviPrixConcurents Configuration_Marges Configuration_Marges_Prix_Fixes Configuration_Marges_Folders Configuration_Fournisseurs_Port  Configuration_Poids_Pneus Notation_Profil Notation_Profil_Commentaire SuiviPrixConcurents Catalogue_Vente Catalogue_Vente_Prix Catalogue_Prix_Revient Catalogue_Fournisseurs Catalogue_Vente_Flat Commandes Commandes_Produits i18n_values i18n_keys Catalogue_Sku Catalogue_Reference_EAN Catalogue_Fournisseurs_Jantes Stock EmplacementStock EmailingUsers Dedoublonnage_EAN";
 $hostname = "10.100.1.19";
 $user = "VM_DEPLOY";
 $realm = "pve";
@@ -98,6 +99,7 @@ if ($pve2->login()) {
     // Lancement du script de config dans la vm
 
     $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' sh /go.sh '.$_POST['ID']);
+    $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' update_dev.sh ' .$tables. '&');
 
     header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
     die();
