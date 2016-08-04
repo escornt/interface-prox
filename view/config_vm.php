@@ -22,23 +22,23 @@
     <div class="row">
       <div class="col-xs-4 col-md-offset-4">
           <form class="form-vertical" role="form" method="POST" action="/controller/configController.php">
-<!-- ID VM -->
-            <div class="form-group has-feedback">
-              <label for="ID VM" class="blu customfont" id="i1">ID CT <i class="fa fa-info-circle"></i></label>
-              <div id="txt1" class="def-hidden"> <small>&nbsp Par défaut la dernière ID disponnible est sélectionnée.</small></div>
-              <input type="number" name="ID" class="form-control" id="ID VM" value="<?php echo $_SESSION['lastID'] ?>">
-              <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
-            </div>
-            <button type="button" class="btn btn-info customfont" id="button-avance">Options avancées</button>
-            <br/>
-          <div id="avance" class="def-hidden">
 <!-- Nom VM -->
-            <div class="form-group has-feedback">
-              <label for="nom_vm" class="blu customfont" id="i2">Nom CT <i class="fa fa-info-circle"></i></label>
-              <div id="txt2" class="def-hidden"> <small>&nbsp Par défaut le lnom sera ct-user.</small></div>
-              <input type="text" name="nom_vm" class="form-control" id="nom_vm" value="<?php echo "ct-".$_SESSION['user'] ?>">
-              <span class="glyphicon glyphicon-tag form-control-feedback blu"></span>
-            </div>
+          <div class="form-group has-feedback">
+            <label for="nom_vm" class="blu customfont" id="i2">Nom CT <i class="fa fa-info-circle"></i></label>
+            <div id="txt2" class="def-hidden"> <small>&nbsp Par défaut le lnom sera ct-user.</small></div>
+            <input type="text" name="nom_vm" class="form-control" id="nom_vm" value="<?php echo "ct-".$_SESSION['user'] ?>">
+            <span class="glyphicon glyphicon-tag form-control-feedback blu"></span>
+          </div>
+
+          <div id="avance" class="def-hidden">
+<!-- ID VM -->
+              <div class="form-group has-feedback">
+                <label for="ID VM" class="blu customfont" id="i1">ID CT <i class="fa fa-info-circle"></i></label>
+                <div id="txt1" class="def-hidden"> <small>&nbsp Par défaut la dernière ID disponnible est sélectionnée.</small></div>
+                <input type="number" name="ID" class="form-control" id="ID VM" value="<?php echo $_SESSION['lastID'] ?>">
+                <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
+              </div>
+              <button type="button" class="btn btn-info customfont" id="button-avance">Options avancées</button>
 <!-- Description -->
             <div class="form-group has-feedback">
               <label for="description" class="blu customfont" id="i3">Description <i class="fa fa-info-circle"></i></label>
