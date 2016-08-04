@@ -104,7 +104,7 @@ if ($pve2->login()) {
 
     $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' sh /go.sh '.$_POST['ID']);
     $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' update_dev.sh ' .$tables. '&');
-
+    sendmail();
     header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
     die();
   } else {

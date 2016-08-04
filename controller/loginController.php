@@ -19,7 +19,7 @@ $Infos = array();
 $InfosDroits = array();
 list($tmp, $tmp2) = explode(".", $_POST['user']);
 $_SESSION['user'] = $tmp;
-var_dump($tmp);
+$_SESSION['umail'] = $_POST['user'];
 //connection ldap
 $result = Connect($_POST["user"], $_POST["pswd"], $Infos, $InfosDroits, $server);
 if ($result == false) {
