@@ -19,7 +19,7 @@
           <p class="customfont blu m1">
             IP : <?php echo $_SESSION['ip'] ?><br/>
             <br/>
-            Pour une configuration plus personnalisée
+            Pour plus d'information et une configuration avancée
             <a href="http://wiki.1001pneus.fr/doku.php?id=it:it:interface_vm&#configuration_avancee">Cliquez ici.</a>
           </p>
         </div>
