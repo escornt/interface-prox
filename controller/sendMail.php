@@ -14,7 +14,7 @@ function sendmail () {
   $header = "From: \"ct-noreply\"<ct-noreply@1001pneus.fr>".$passage_ligne;
   $header .= "Reply-to: \"ct-noreply\" <ct-noreply@1001pneus.fr>".$passage_ligne;
   $header .= "MIME-Version: 1.0".$passage_ligne;
-  $header .= "multipart/alternative".$passage_ligne;
+  $header .= "Delivered-to: ".$destination.$passage_ligne;
 
   $message = "La ct ".$_SESSION['ID']." est maintenant utilisable.";
 
