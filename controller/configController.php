@@ -8,7 +8,7 @@ $_SESSION['ID'] = $_POST['ID'];
 require_once(__DIR__ . "/../pve2_api.class.php");
 require_once("./sendMail.php");
 if ($_POST['template'] == 'par defaut') {
-  $template = "ct_template-1.9.tar.gz";
+  $template = "ct_template-defaut-1.10.tar.gz";
 } else {
   $template = "ct_template-mobile-1.0.tar.gz";
 }
@@ -103,7 +103,7 @@ if ($pve2->login()) {
     }
     // Lancement du script de config dans la vm
 
-    $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' sh /go.sh '.$_POST['ID']);
+    $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' sh /go.sh '.$_POST['ID'].' '.$_POST['nom_vm']);
     $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' update_dev.sh ' .$tables. '&');
     sendmail();
     header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
