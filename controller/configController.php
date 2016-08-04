@@ -6,6 +6,7 @@ $_SESSION['nom_vm'] = $_POST['nom_vm'];
 
 
 require_once(__DIR__ . "/../pve2_api.class.php");
+require_once("./sendMail.php");
 if ($_POST['template'] == 'par defaut') {
   $template = "ct_template-1.9.tar.gz";
 } else {
