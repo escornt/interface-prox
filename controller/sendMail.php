@@ -18,7 +18,7 @@ function sendmail () {
   $header .= "MIME-Version: 1.0".$passage_ligne;
   $header .= "multipart/alternative".$passage_ligne;
   $boundary = "-----=".md5(rand());
-  $boundary=\"$boundary\"".$passage_ligne;
+  $boundary="\"$boundary\"".$passage_ligne;
 
   $message = $passage_ligne."--".$boundary.$passage_ligne;
   $message .= "Content-Type: text/html; charset=\"ISO-8859-1\"".$passage_ligne;
