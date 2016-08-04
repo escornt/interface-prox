@@ -29,7 +29,7 @@
             <input type="text" name="nom_vm" class="form-control" id="nom_vm" value="<?php echo "ct-".$_SESSION['user'] ?>">
             <span class="glyphicon glyphicon-tag form-control-feedback blu"></span>
           </div>
-
+          <button type="button" class="btn btn-info customfont" id="button-avance">Options avancées</button>
           <div id="avance" class="def-hidden">
 <!-- ID VM -->
               <div class="form-group has-feedback">
@@ -38,7 +38,6 @@
                 <input type="number" name="ID" class="form-control" id="ID VM" value="<?php echo $_SESSION['lastID'] ?>">
                 <span class="glyphicon glyphicon-th-large form-control-feedback blu"></span>
               </div>
-              <button type="button" class="btn btn-info customfont" id="button-avance">Options avancées</button>
 <!-- Description -->
             <div class="form-group has-feedback">
               <label for="description" class="blu customfont" id="i3">Description <i class="fa fa-info-circle"></i></label>
