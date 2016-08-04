@@ -3,7 +3,7 @@ session_start();
 
 $_SESSION['ip'] = "10.100.4.".$_POST['ID'];
 $_SESSION['nom_vm'] = $_POST['nom_vm'];
-
+$_SESSION['ID'] = $_POST['ID'];
 
 require_once(__DIR__ . "/../pve2_api.class.php");
 require_once("./sendMail.php");
