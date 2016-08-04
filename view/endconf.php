@@ -16,10 +16,10 @@
     <div class="row">
         <div class="col-xs-5 col-md-offset-3">
           <div class="m1 customfont blu fs2">La VM <?php echo $_SESSION['ID']; ?> a été créée avec succès</div>
-          <p class="customfont blu fs2">
+          <p class="customfont blu m1">
             IP : <?php echo $_SESSION['ip'] ?><br/>
             <br/>
-            Pour utiliser les alias <?php echo $_SESSION['nom_vm'];?>.www.1001pneus.fr et <?php echo $_SESSION['nom_vm'];?>.admin.1001pneus.fr pour accéder à votre site :<br/>
+            Pour une configuration plus personnalisée :<br/>
 
           </p>
         </div>
