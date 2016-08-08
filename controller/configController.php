@@ -8,7 +8,7 @@ $_SESSION['ID'] = $_POST['ID'];
 require_once(__DIR__ . "/../pve2_api.class.php");
 require_once("./sendMail.php");
 if ($_POST['template'] == 'par defaut') {
-  $template = "ct_template-defaut-1.11.tar.gz";
+  $template = "ct_template-defaut-1.12.tar.gz";
 } else {
   $template = "ct_template-mobile-1.2.tar.gz";
 }
