@@ -22,7 +22,7 @@
             Pour plus d'information et une configuration avancée
             <a href="http://wiki.1001pneus.fr/doku.php?id=it:it:interface_vm&#configuration_avancee">Cliquez ici.</a>
             <br/>
-            <a href="interface-prox.www.1001pneus.fr">Retour au portail de login</a>
+            <a href="/">Retour au portail de login</a>
           </p>
         </div>
     </div><!-- /.row -->
