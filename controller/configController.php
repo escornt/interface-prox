@@ -8,9 +8,9 @@ $_SESSION['ID'] = $_POST['ID'];
 require_once(__DIR__ . "/../pve2_api.class.php");
 require_once("./sendMail.php");
 if ($_POST['template'] == 'par defaut') {
-  $template = "ct_template-defaut-1.12.tar.gz";
+  $template = "ct_template-defaut-1.13.tar.gz";
 } else {
-  $template = "ct_template-mobile-1.3.tar.gz";
+  $template = "ct_template-mobile-1.4.tar.gz";
 }
 $tables = "Commandes_Suivi_Client Commandes_Suivis Affacturage_DemandeFinancement Affacturage Affacturage_Files Affacturage_Reincrement Commandes_Infos Suivi_Colis Suivi_Details Configuration_Transporteurs Fournisseur_Transporteurs station_montage_account Account Account_Addresses SuiviPrixConcurents Configuration_Marges Configuration_Marges_Prix_Fixes Configuration_Marges_Folders Configuration_Fournisseurs_Port  Configuration_Poids_Pneus Notation_Profil Notation_Profil_Commentaire SuiviPrixConcurents Catalogue_Vente Catalogue_Vente_Prix Catalogue_Prix_Revient Catalogue_Fournisseurs Catalogue_Vente_Flat Commandes Commandes_Produits i18n_values i18n_keys Catalogue_Sku Catalogue_Reference_EAN Catalogue_Fournisseurs_Jantes Stock EmplacementStock EmailingUsers Dedoublonnage_EAN";
 $hostname = "10.100.1.19";
@@ -102,11 +102,15 @@ if ($pve2->login()) {
       $current_status = ($pve2->get_vm_task_status($first_node, $task));
     }
     // Lancement du script de config dans la vm
-
-    $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' sh /go.sh '.$_POST['ID'].' '.$_POST['nom_vm']);
     $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' update_dev.sh ' .$tables. '&');
+    if ($_POST['cttime'] == 'oui') {
+      $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' date +%s > /cttime');
+    } else {
+      $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' echo d > /cttime');
+    }
+    $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' sh /go.sh '.$_POST['ID'].' '.$_POST['nom_vm']);
     sendmail();
-    $stream = ssh2_exec($connect, 'vzctl exec '.$_POST['ID'].' reboot');
+    
     header('Location: http://interface-prox.www.1001pneus.fr/view/endconf.php');
     die();
   } else {

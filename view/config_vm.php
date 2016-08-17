@@ -31,6 +31,8 @@
           </div>
           <button type="button" class="btn btn-info customfont" id="button-avance">Options avancées</button>
           <div id="avance" class="def-hidden">
+            <div class="blu customfont"><input type="radio" name="cttime" value="oui" checked> Régulation de CT automatique activée. </div>
+            <div class="blu customfont"><input type="radio" name="cttime" value="non"> Désactivée. </div>
 <!-- ID VM -->
               <div class="form-group has-feedback">
                 <label for="ID VM" class="blu customfont" id="i1">ID CT <i class="fa fa-info-circle"></i></label>
